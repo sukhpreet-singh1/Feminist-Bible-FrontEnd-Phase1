@@ -4,14 +4,14 @@
   display: block;
   color: #fff;
   padding: 1rem 0 2rem;
-  background: linear-gradient(180deg, #fff 50%, #ffc7e3 50%);
+  background: linear-gradient(180deg, #fff 50%, $secondary-color 50%);
 }
 
 .inner-container {
   width: 80%;
   margin: auto;
   display: flex;
-  background-color: #4a2343;
+  background-color: $primary-color;
   flex-direction: row;
   padding: 2rem;
 }
