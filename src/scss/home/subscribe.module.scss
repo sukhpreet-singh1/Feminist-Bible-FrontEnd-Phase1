@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #0d0d0d;
+  background-color: $dark-color;
   color: #fff;
 }
 
@@ -20,7 +20,7 @@
   line-height: 1.5rem;
   font-size: 1rem;
   background-color: #fff;
-  color: #0d0d0d;
+  color: $dark-color;
   border-radius: 14px;
   padding: 10px 1rem;
   margin-right: 0.5rem;
@@ -31,7 +31,7 @@
   padding: 10px;
   border-radius: 14px;
   box-shadow: 0 3px 6px 0 rgba(238, 230, 230, 0.24);
-  background-color: #ffc7e3;
+  background-color: $secondary-color;
   line-height: 1.5rem;
   font-size: 1rem;
   font-weight: bold;
