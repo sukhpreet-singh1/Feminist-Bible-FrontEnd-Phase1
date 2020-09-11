@@ -1,33 +1,31 @@
-import { Button, Toolbar as ToolBar, AppBar } from '@material-ui/core';
-import Link from 'next/link';
 import React from 'react';
 
-import CityLogo from '../ui/icons';
+import styles from '../../scss/header_footer/header.module.scss';
 
 export default function Header() {
   return (
-    <AppBar
-      position="fixed"
-      style={{
-        boxShadow: 'none',
-        backgroundColor: '#98c5e9',
-        padding: '10px 0px',
-        borderBottom: '2px solid #00285e'
-      }}>
-      <ToolBar style={{ display: 'flex' }}>
-        <div style={{ flexGrow: 1 }}>
-          <div className="header_logo">
-            <CityLogo link linkTo="/" width="70px" height="70px" />
-          </div>
-        </div>
+    <div className={styles.container}>
+      <div className={styles['left-col']}>
+        <img className={styles.logo} src="../images/full-logo.png" alt="Logo" />
 
-        <Link href="/the_team">
-          <Button color="inherit">The Team</Button>
-        </Link>
-        <Link href="/the_matches">
-          <Button color="inherit">Matches</Button>
-        </Link>
-      </ToolBar>
-    </AppBar>
+        {/* Search Bar */}
+        <span className={styles.search}>
+          <input className={styles.input} placeholder="Search" />
+          <img src="../icons/search.png" alt="Search" />
+        </span>
+      </div>
+
+      <div className={styles['right-col']}>
+        <a className={styles.link} href="/">
+          FEED
+        </a>
+        <a className={styles.link} href="/">
+          LOGIN
+        </a>
+        <a className={styles.link} href="/">
+          SIGNUP
+        </a>
+      </div>
+    </div>
   );
 }
