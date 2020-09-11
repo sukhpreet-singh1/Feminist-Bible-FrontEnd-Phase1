@@ -1,0 +1,40 @@
+@import '../variables';
+.container {
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+.text {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: $sub-heading;
+}
+
+.input {
+  border: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #0d0d0d;
+  border-radius: 14px;
+  padding: 10px 1rem;
+  margin-right: 0.5rem;
+}
+
+.subscribe-button {
+  border: none;
+  padding: 10px;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px 0 rgba(238, 230, 230, 0.24);
+  background-color: #ffc7e3;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4e4848;
+}
