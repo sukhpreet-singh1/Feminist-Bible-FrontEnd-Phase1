@@ -1,0 +1,19 @@
+@import '../variables';
+.container {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  background-color: #0d0d0d;
+  padding: 1rem 1rem 0;
+}
+
+.left-col {
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 5rem 2.5rem 0;
+    flex-direction: row;
+
+}
