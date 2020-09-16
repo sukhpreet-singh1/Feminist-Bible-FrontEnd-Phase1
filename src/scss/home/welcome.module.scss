@@ -52,3 +52,35 @@
     height: 50%;
   }
 }
+
+@media (max-width: 1000px) {
+  .inner-container {
+    width: 90%;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .inner-container {
+    flex-direction: column;
+  }
+
+  .left-col {
+    width: 100%;
+
+    span {
+      font-size: 1.25rem;
+    }
+
+    .text {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+  .right-col {
+    width: 100%;
+    :nth-child(2) {
+      display: none;
+    }
+  }
+}

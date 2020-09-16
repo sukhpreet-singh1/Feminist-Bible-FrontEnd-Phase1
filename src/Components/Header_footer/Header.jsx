@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from '../../scss/header_footer/header.module.scss';
+import SideDrawer from './SideDrawer';
 
 export default function Header() {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const toggleSideDrawer = () => {
+    setOpenDrawer(!openDrawer);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles['left-col']}>
@@ -16,7 +23,7 @@ export default function Header() {
       </div>
 
       <div className={styles['right-col']}>
-        <a className={styles.link} href="/">
+        <a className={`${styles.link} ${styles.feedLink}`} href="/">
           FEED
         </a>
         <a className={styles.link} href="/">
@@ -25,7 +32,15 @@ export default function Header() {
         <a className={styles.link} href="/">
           SIGNUP
         </a>
+        <button
+          type="button"
+          className={styles['drawer-button']}
+          onClick={toggleSideDrawer}>
+          <img src="../icons/hamburger.png" alt="Open Menu" />
+        </button>
       </div>
+
+      {openDrawer && <SideDrawer />}
     </div>
   );
 }
