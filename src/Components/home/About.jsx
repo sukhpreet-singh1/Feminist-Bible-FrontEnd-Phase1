@@ -22,19 +22,17 @@ const About = () => {
             <br />
             What do we do&#63;
           </p>
-          <p className={styles['text-2']}>
-            <ul>
-              <li>We create a sense of belonging for all. </li>
-              <li>
-                We promote awareness by sharing the unheard voices from
-                underrepresented and diverse people.
-              </li>
-              <li>
-                We spread kindness, positivity, hope, curiosity, and fun in
-                people&apos;s lives.
-              </li>
-            </ul>
-          </p>
+          <ul className={styles['text-2']}>
+            <li>We create a sense of belonging for all. </li>
+            <li>
+              We promote awareness by sharing the unheard voices from
+              underrepresented and diverse people.
+            </li>
+            <li>
+              We spread kindness, positivity, hope, curiosity, and fun in
+              people&apos;s lives.
+            </li>
+          </ul>
           <span>
             <button className={styles['about-buttons']} type="button">
               Learn More
@@ -47,6 +45,7 @@ const About = () => {
         </div>
         <div className={styles['right-col']}>
           <img src="../images/about.png" alt="" />
+          <img src="../images/about-mobile.png" alt="" />
         </div>
       </div>
     </div>

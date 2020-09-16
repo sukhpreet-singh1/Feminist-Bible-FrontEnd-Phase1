@@ -18,7 +18,8 @@
   }
 
   .search {
-    border-radius: 14px;
+    border-radius: 25px;
+    width: 90%;
     display: flex;
     padding: 0 0.25rem;
     align-items: center;
@@ -36,7 +37,7 @@
   }
 
   .input {
-    width: 90%;
+    width: 80%;
     border: none;
     padding: 0.5rem 1rem;
     color: $dark-color;
@@ -62,6 +63,37 @@
       color: #fff;
       background-color: $dark-color;
       border-radius: 1rem;
+    }
+  }
+
+  .drawer-button {
+    background: none;
+    border: none;
+    margin-left: 1rem;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .left-col {
+    .logo {
+      max-width: 8rem;
+    }
+    .search {
+      display: none;
+    }
+  }
+
+  .right-col {
+    .link {
+      display: none;
+    }
+    .feedLink {
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+      display: block !important;
     }
   }
 }

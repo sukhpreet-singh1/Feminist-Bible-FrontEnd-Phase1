@@ -50,6 +50,7 @@
 .about-buttons {
   border: none;
   background-color: $secondary-color;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-size: 1.25rem;
@@ -59,6 +60,10 @@
 
 .right-col {
   width: 50%;
+
+  :nth-child(2) {
+    display: none;
+  }
   img {
     display: block;
     margin: auto;
@@ -66,5 +71,53 @@
     height: 100%;
     max-width: 500px;
     max-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .heading {
+    padding: 0 0 0 0.5rem;
+    font-size: 1.68rem;
+    img {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .left-col {
+    width: 100%;
+
+    .text-1 {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+    }
+
+    .text-2 {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .about-buttons {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: $sub-heading;
+    border-radius: 2rem;
+  }
+
+  .right-col {
+    width: 100%;
+    :nth-child(1) {
+      display: none;
+    }
+    :nth-child(2) {
+      display: block;
+    }
   }
 }
