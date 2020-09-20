@@ -6,15 +6,14 @@
 }
 
 .heading {
-  padding-left: 2rem;
-  font-family: $sub-heading;
-  font-size: 3rem;
-
-  img {
-    height: 5rem;
-    width: 5rem;
-    transform: rotate(15deg);
-  }
+  display: block;
+  margin: auto;
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  font-family: $sub-heading-font;
+  color: $heading-color;
 }
 
 .main-content {
@@ -26,15 +25,14 @@
 .left-col {
   width: 50%;
   .text-1 {
-    font-size: 1.125rem;
-    line-height: 1.5;
+    line-height: 2.25;
+    font-weight: 400;
   }
 
   .text-2 {
     margin-top: 1rem;
-    font-size: 1.125rem;
-    line-height: 2;
-    font-weight: 600;
+    line-height: 2.25;
+    font-weight: 500;
   }
 
   span {
@@ -43,19 +41,28 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
-    padding: 1rem;
+  }
+
+  ul {
+    list-style-image: url('/icons/star.svg');
   }
 }
 
 .about-buttons {
-  border: none;
-  background-color: $secondary-color;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  font-size: 1.25rem;
-  font-family: $sub-heading;
-  border-radius: 1rem;
+  font-weight: 500;
+  border: 2px solid $violet-shade;
+  margin: 0 1rem;
+}
+
+#learn-more {
+  background-color: $background-yellow;
+  color: $violet-shade;
+}
+
+#feed {
+  background-color: $violet-shade;
+  color: #fff;
 }
 
 .right-col {
@@ -74,14 +81,38 @@
   }
 }
 
+.quote-div {
+  display: block;
+  margin: 2rem auto;
+  position: relative;
+  width: 75%;
+  padding: 1.5rem;
+  background-color: $background-yellow;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.25);
+  img {
+    max-width: 2rem;
+    max-height: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+  p {
+    width: 80%;
+    position: relative;
+    top: 5%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: $violet-shade;
+    font-family: $sub-heading-font;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .heading {
-    padding: 0 0 0 0.5rem;
-    font-size: 1.68rem;
-    img {
-      height: 3rem;
-      width: 3rem;
-    }
+    font-size: 1.5rem;
   }
 
   .main-content {
@@ -104,11 +135,7 @@
   }
 
   .about-buttons {
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    font-size: 1rem;
-    font-family: $sub-heading;
-    border-radius: 2rem;
+    margin: 0;
   }
 
   .right-col {
@@ -118,6 +145,18 @@
     }
     :nth-child(2) {
       display: block;
+    }
+  }
+
+  .quote-div {
+    width: 100%;
+    padding: 0.5rem;
+    img {
+      top: 2.5%;
+      left: 2.5%;
+    }
+    p {
+      font-size: 1.25rem;
     }
   }
 }

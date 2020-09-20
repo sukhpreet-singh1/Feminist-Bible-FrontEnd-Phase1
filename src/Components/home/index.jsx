@@ -1,14 +1,14 @@
 import React from 'react';
 
 import About from './About';
-import Subscribe from './Subscribe';
+// import Subscribe from './Subscribe';
 import Welcome from './Welcome';
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="homepage-container">
       <Welcome />
-      <Subscribe />
+      {/* <Subscribe /> */}
       <About />
     </div>
   );

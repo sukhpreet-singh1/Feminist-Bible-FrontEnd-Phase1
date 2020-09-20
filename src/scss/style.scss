@@ -1,9 +1,11 @@
+@import './variables';
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: 'Century Gothic', 'Futura', 'Didact Gothic', sans-serif;
+  font-family: $text-font;
+  color: $text-color;
 }
 
 a {
@@ -13,4 +15,14 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  line-height: 22px;
+  font-size: 18px;
+  border-radius: 2px;
+  background: none;
+}
+
+.homepage-container {
+  background: linear-gradient(330deg, $pink-shade 45%, $background-yellow 45%);
 }

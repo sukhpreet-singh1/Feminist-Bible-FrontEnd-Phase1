@@ -1,0 +1,10 @@
+@import '../variables';
+.container {
+  position: fixed;
+  right: 0;
+  top: 4rem;
+  padding: 1rem;
+  background: $pink-shade;
+  width: 50%;
+  height: 100%;
+}

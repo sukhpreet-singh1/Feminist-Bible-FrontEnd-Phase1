@@ -1,7 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Arya&display=swap'); // Arya Font for Subheadings
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic'); // Century Gothic Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap'); // Montserrat for text
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap'); // PlayFair Display for Heading
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap'); // Mr De Haviland
 
-$primary-color: #4a2343;
-$secondary-color: #ffc7e3;
 $dark-color: #0d0d0d;
-$sub-heading: 'Arya', sans-serif;
+
+/* Text Styles */
+
+$heading-font: 'Mr De Haviland', cursive;
+$sub-heading-font: 'Playfair Display', serif;
+$text-font: 'Montserrat', sans-serif;
+
+/* Colors */
+
+$heading-color: #000000;
+$text-color: #2e2e2e;
+
+$background-yellow: #fff6fb;
+$background-pink: #ffc7a3;
+
+$violet-shade: #4a2343;
+$pink-shade: #ffc7e3;
+$dark-pink-shade: #ab1d79;

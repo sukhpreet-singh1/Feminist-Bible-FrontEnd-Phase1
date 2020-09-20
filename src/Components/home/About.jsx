@@ -5,11 +5,13 @@ import styles from '../../scss/home/about.module.scss';
 const About = () => {
   return (
     <div className={styles.container}>
-      <span className={styles.heading}>
-        About Feminist Bible
-        <img src="../images/h1.png" alt="" />
-      </span>
+      <span className={styles.heading}>About Feminist Bible</span>
       <div className={styles['main-content']}>
+        <div className={styles['right-col']}>
+          <img src="../images/about.png" alt="" />
+          <img src="../images/about-mobile.png" alt="" />
+        </div>
+
         <div className={styles['left-col']}>
           <p className={styles['text-1']}>
             Are you ready to share your story, participate in this positive and
@@ -34,19 +36,31 @@ const About = () => {
             </li>
           </ul>
           <span>
-            <button className={styles['about-buttons']} type="button">
+            <button
+              className={styles['about-buttons']}
+              type="button"
+              id={styles['learn-more']}>
               Learn More
             </button>
 
-            <button className={styles['about-buttons']} type="button">
+            <button
+              className={styles['about-buttons']}
+              type="button"
+              id={styles.feed}>
               Go To Feed
             </button>
           </span>
         </div>
-        <div className={styles['right-col']}>
-          <img src="../images/about.png" alt="" />
-          <img src="../images/about-mobile.png" alt="" />
-        </div>
+      </div>
+      <div className={styles['quote-div']}>
+        <img src="/icons/quote-start.svg" alt='"' />
+        <p>
+          Every Community has certain rules in place to enhance it&apos;s
+          efficiency and also for the convenience of all it&apos;s members. We
+          too have a few guidelines for any prospective member of our Feminist
+          Bible family! These rules would tell you most of what you would need
+          to know about our community before you decide to join us.
+        </p>
       </div>
     </div>
   );
