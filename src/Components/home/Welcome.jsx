@@ -22,10 +22,12 @@ const Welcome = () => {
           <img src="../images/welcome.svg" alt="Welcome " />
         </div>
       </div>
-      <button type="button" className={styles.button}>
-        {' '}
-        GO TO FEED
-      </button>
+      <a href="/feed">
+        <button type="button" className={styles.button}>
+          {' '}
+          GO TO FEED
+        </button>
+      </a>
     </div>
   );
 };

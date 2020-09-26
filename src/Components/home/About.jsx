@@ -36,13 +36,14 @@ const About = () => {
             </li>
           </ul>
           <span>
-            <button
-              className={styles['about-buttons']}
-              type="button"
-              id={styles['learn-more']}>
-              Learn More
-            </button>
-
+            <a href="/feed">
+              <button
+                className={styles['about-buttons']}
+                type="button"
+                id={styles['learn-more']}>
+                Learn More
+              </button>
+            </a>
             <button
               className={styles['about-buttons']}
               type="button"
