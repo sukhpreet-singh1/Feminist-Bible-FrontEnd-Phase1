@@ -9,7 +9,6 @@ const About = () => {
       <div className={styles['main-content']}>
         <div className={styles['right-col']}>
           <img src="../images/about.png" alt="" />
-          <img src="../images/about-mobile.png" alt="" />
         </div>
 
         <div className={styles['left-col']}>
@@ -36,20 +35,20 @@ const About = () => {
             </li>
           </ul>
           <span>
+            <button
+              className={styles['about-buttons']}
+              type="button"
+              id={styles['learn-more']}>
+              Learn More
+            </button>
             <a href="/feed">
               <button
                 className={styles['about-buttons']}
                 type="button"
-                id={styles['learn-more']}>
-                Learn More
+                id={styles.feed}>
+                Go To Feed
               </button>
             </a>
-            <button
-              className={styles['about-buttons']}
-              type="button"
-              id={styles.feed}>
-              Go To Feed
-            </button>
           </span>
         </div>
       </div>

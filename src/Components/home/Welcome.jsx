@@ -19,7 +19,11 @@ const Welcome = () => {
         </div>
 
         <div className={styles['right-col']}>
-          <img src="../images/welcome.svg" alt="Welcome " />
+          <img
+            src="../images/welcome.png"
+            alt="Welcome"
+            style={{ borderRadius: '5px' }}
+          />
         </div>
       </div>
       <a href="/feed">
