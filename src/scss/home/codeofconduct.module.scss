@@ -32,7 +32,6 @@
 }
 
 .left-col {
-  width: 50%;
   margin:auto;
   
   img {
@@ -41,7 +40,7 @@
     height: 100%;
     max-width: 400px;
     max-height: 400px;
-    margin:auto auto auto 20px;;
+    margin-right: 50px;;
   }
   
 }
@@ -51,6 +50,7 @@
   padding-left: 1rem;
   margin-top:100px;
   padding-top:20px;
+  display:inline-block;
   .text-1 {
     font-style: normal;
     font-weight: 500;
@@ -73,13 +73,11 @@ div.right-col ul li{
   .main-content {
     flex-direction: column;
     padding: 0;
-    text-align:center;
   }
 
   .right-col {
     width: 100%;
     padding: 0;
-    text-align:center;
     .text-1 {
       font-size: 1rem;
       padding-left: 1rem;
@@ -87,7 +85,6 @@ div.right-col ul li{
   }
 
   .left-col {
-    width: 100%;
     text-align:center;
     margin:auto;
     img {
