@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from '../../scss/desktop/desktop3.module.scss';
+import styles from './feed.module.scss';
 
-const Desktop = () => {
+const FeedFinal = () => {
   return (
     <div className={styles.container}>
       <h2>
@@ -133,4 +133,4 @@ const Desktop = () => {
     </div>
   );
 };
-export default Desktop;
+export default FeedFinal;

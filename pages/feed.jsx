@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Desktop from '../src/Components/desktop/feed';
+import FeedFinal from '../src/Components/Feed/Feed';
 import Layout from '../src/Hoc/Layout';
 
 const Feed = () => {
   return (
     <Layout>
-      <Desktop />
+      <FeedFinal />
     </Layout>
   );
 };

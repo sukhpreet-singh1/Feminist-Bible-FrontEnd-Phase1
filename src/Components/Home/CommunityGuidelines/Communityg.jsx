@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../scss/home/communityg.module.scss';
+import styles from './communityg.module.scss';
 
 const Communityg = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../scss/home/meet.module.scss';
+import styles from './meet.module.scss';
 
 const Meet = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import styles from '../../scss/header_footer/header.module.scss';
-import SideDrawer from './SideDrawer';
+import SideDrawer from '../SideDrawer/SideDrawer';
+import styles from './header.module.scss';
 
 export default function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import About from './About';
-import Codeofconduct from './Codeofconduct';
-import Communityg from './Communityg';
-import Meet from './Meet';
-// import Subscribe from './Subscribe';
-import Welcome from './Welcome';
+import About from './About/About';
+import Codeofconduct from './CodeOfConduct/Codeofconduct';
+import Communityg from './CommunityGuidelines/Communityg';
+import Meet from './Meet/Meet';
+// import Subscribe from './Subscribe/Subscribe';
+import Welcome from './Welcome/Welcome';
 
 const LandingPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../scss/home/codeofconduct.module.scss';
+import styles from './codeofconduct.module.scss';
 
 const Codeofconduct = () => {
   return (
