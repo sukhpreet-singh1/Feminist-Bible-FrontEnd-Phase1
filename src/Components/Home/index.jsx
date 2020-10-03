@@ -9,10 +9,12 @@ import Welcome from './Welcome/Welcome';
 
 const LandingPage = () => {
   return (
-    <div className="homepage-container">
-      <Welcome />
-      {/* <Subscribe /> */}
-      <About />
+    <div>
+      <div className="homepage-container">
+        <Welcome />
+        {/* <Subscribe /> */}
+        <About />
+      </div>
       <Communityg />
       <Codeofconduct />
       <Meet />

@@ -17,10 +17,7 @@ export default function Header() {
       </div>
 
       <div className={styles['right-col']}>
-        <button
-          type="button"
-          id={styles.signup}
-          className={styles.button}>
+        <button type="button" id={styles.signup} className={styles.button}>
           {' '}
           SIGNUP{' '}
         </button>
