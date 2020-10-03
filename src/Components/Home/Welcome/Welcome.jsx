@@ -8,14 +8,14 @@ const Welcome = () => {
       <div className={styles['inner-container']}>
         <div className={styles['left-col']}>
           <h1 className={styles.heading}>Feminist Bible</h1>
-          <span> MADE FOR ALL BY WOMEN</span>
+          <span>&quot;MADE FOR ALL, BY WOMEN&quot;</span>
           <p className={styles.text}>
             Feminist Bible is an inclusive space for all. A place where we
             empathize, acknowledge, and promote diversity by creating an
             inclusive ecosystem powered by shared stories, culturally sensitive
             content, and equity-driven community philosophy.
           </p>
-          <span>- Maybelyn Plecic &amp; Rashmeet Kaur</span>
+          <span>Maybelyn Plecic &amp; Rashmeet Kaur</span>
         </div>
 
         <div className={styles['right-col']}>
