@@ -2,126 +2,34 @@ import React from 'react';
 
 import styles from './feed.module.scss';
 
-const FeedFinal = () => {
+const FeedPage3 = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>
-        <h2>
-          <strong style={{ color: '#ab1d79' }}>
-            Adventures of Vita &amp; Akira
-          </strong>
-        </h2>
-        <a href="/feed1">
-          <button>See more &gt;</button>
-        </a>
-      </div>
-      <div className={styles.flex}>
-        <div className={styles.left_side_article}>
-          <img src="../images/desktop-feature-img-1.png" alt="" />
-          <div>
-            <h2>
-              <strong>Exploring the depths on the Internet</strong>
-            </h2>
-            <p>Lorem ipsum sig mundus creatus est.</p>
-            <h2>Tiffany Grant</h2>
-            <h2>Aug 2, 2020</h2>
-          </div>
-        </div>
-        <div className={styles.right_side_articles}>
-          <div className={styles.RS_list}>
-            <img src="../images/desktop-feature-img-1.png" alt="" />
-            <div>
-              <h2>
-                <strong>Exploring the depths on the Internet</strong>
-              </h2>
-              <p>Lorem ipsum sig mundus creatus est.</p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
-          </div>
-          <div className={styles.RS_list} style={{ margin: '1rem auto' }}>
-            <img src="../images/desktop-feature-img-2.png" alt="" />
-            <div>
-              <h2>
-                <strong>Exploring the depths on the Internet</strong>
-              </h2>
-              <p>Lorem ipsum sig mundus creatus est.</p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
-          </div>
-          <div className={styles.RS_list}>
-            <img src="../images/desktop-feature-img-1.png" alt="" />
-            <div>
-              <h2>
-                <strong>Exploring the depths on the Internet</strong>
-              </h2>
-              <p>Lorem ipsum sig mundus creatus est.</p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.heading}>
-        <h2>
-          <strong style={{ color: '#ab1d79' }}>Real Women Real Stories</strong>
-        </h2>
-        <a href="/feed2">
-          <button>See more &gt;</button>
-        </a>
-      </div>
-      <div className={styles.flex}>
-        <div className={styles.left_side_article}>
-          <img src="../images/desktop-feature-img-1.png" alt="" />
-          <div>
-            <h2>
-              <strong>Exploring the depths on the Internet</strong>
-            </h2>
-            <p>Lorem ipsum sig mundus creatus est.</p>
-            <h2>Tiffany Grant</h2>
-            <h2>Aug 2, 2020</h2>
-          </div>
-        </div>
-        <div className={styles.right_side_articles}>
-          <div className={styles.RS_list}>
-            <img src="../images/desktop-feature-img-1.png" alt="" />
-            <div>
-              <h2>
-                <strong>Exploring the depths on the Internet</strong>
-              </h2>
-              <p>Lorem ipsum sig mundus creatus est.</p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
-          </div>
-          <div className={styles.RS_list} style={{ margin: '1rem auto' }}>
-            <img src="../images/desktop-feature-img-2.png" alt="" />
-            <div>
-              <h2>
-                <strong>Exploring the depths on the Internet</strong>
-              </h2>
-              <p>Lorem ipsum sig mundus creatus est.</p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
-          </div>
-          <div className={styles.RS_list}>
-            <img src="../images/desktop-feature-img-1.png" alt="" />
-            <div>
-              <h2>
-                <strong>Exploring the depths on the Internet</strong>
-              </h2>
-              <p>Lorem ipsum sig mundus creatus est.</p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className={styles.heading}>
         <h2>
           <strong style={{ color: '#ab1d79' }}>
             Badass Women from History
           </strong>
         </h2>
-        <a href="/feed3">
-          <button>See more &gt;</button>
-        </a>
+        <button id={styles.search}>
+          <img src="/icons/search2.png" />
+          <span>
+            <input
+              style={{ border: 'none' }}
+              type="text"
+              placeholder="SEARCH"
+            />
+          </span>
+        </button>
+      </div>
+      <div className={styles.quote}>
+        <img src="/icons/quote-start.svg" alt='"' />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+          pharetra nibh quam mauris eget lobortis ut sed eu. Ipsum odio urna
+          etiam nisi. Nulla sodales felis, vitae nullam. Praesent enim magna eu,
+          volutpat lacus.
+        </p>
       </div>
       <div className={styles.flex}>
         <div className={styles.left_side_article}>
@@ -241,11 +149,8 @@ const FeedFinal = () => {
             </div>
           </div>
         </div>
-        <div style={{ background: '#FFC7E3', height: '160vh', width: '30%' }}>
-          <p>past women</p>
-        </div>
       </div>
     </div>
   );
 };
-export default FeedFinal;
+export default FeedPage3;
