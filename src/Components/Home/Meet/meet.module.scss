@@ -19,8 +19,8 @@
     right: 0;
     height: 0;
     width: 0;
-    border-left: 100px solid transparent;
-    border-top: 100px solid #4A2343;
+    border-left: 150px solid transparent;
+    border-top: 150px solid #4A2343;
 
   }
 .heading {
@@ -85,5 +85,21 @@
         max-width: 250px;
       }
     }
+    .slanted{
+      border-left: 90px solid transparent;
+      border-top: 90px solid #4A2343;
+    }
   
 } 
+@media only screen and (max-width: 400px) {
+  .slanted{
+    border-left: 50px solid transparent;
+    border-top: 50px solid #4A2343;
+  }
+}
+@media only screen and (max-width: 315px) {
+  .slanted{
+    border-left: 30px solid transparent;
+    border-top: 30px solid #4A2343;
+  }
+}
