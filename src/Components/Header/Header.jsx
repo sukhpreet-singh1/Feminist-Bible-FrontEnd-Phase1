@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import SideDrawer from '../SideDrawer/SideDrawer';
 import styles from './header.module.scss';
 
 export default function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);
-
+  useEffect(() => {
+    if (openDrawer === true) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [openDrawer]);
   const toggleSideDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
@@ -33,7 +39,7 @@ export default function Header() {
           <img src="/icons/hamburger.svg" alt="Menu" />
         </button>
       </div>
-      {openDrawer && <SideDrawer />}
+      {openDrawer && <SideDrawer toggleSideDrawer={toggleSideDrawer} />}
     </div>
   );
 }
