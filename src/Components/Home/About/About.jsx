@@ -4,7 +4,7 @@ import styles from './about.module.scss';
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <span className={styles.heading}>About Feminist Bible</span>
       <div className={styles['main-content']}>
         <div className={styles['right-col']}>

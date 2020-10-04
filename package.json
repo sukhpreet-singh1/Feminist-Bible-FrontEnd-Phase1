@@ -11,6 +11,7 @@
     "d3-ease": "^1.0.6",
     "firebase": "^7.15.1",
     "next": "^9.5.2",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-firebase-file-uploader": "^2.4.3",
