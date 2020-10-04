@@ -19,7 +19,7 @@
     font-family: $text-font;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     color: #2e2e2e;
   }
@@ -55,7 +55,7 @@ span.heading {
   text-align: center;
   color: #2e2e2e;
 }
-.list,
+.list ,
 .text-1 {
   margin-top: 40px;
   padding-bottom: 15px;
@@ -64,8 +64,8 @@ span.heading {
 .list-1 {
   padding-bottom: 15px;
 }
-.list-1,
-.list {
+.list-1 a,
+.list a{
   padding-left: 0px;
 }
 .bottom-text {

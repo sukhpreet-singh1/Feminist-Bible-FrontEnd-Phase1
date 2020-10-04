@@ -5,6 +5,8 @@ import styles from './communityg.module.scss';
 const Communityg = () => {
   return (
     <div className={styles.container}>
+      <p className={styles.slant} />
+      <div className={styles.slanted} />
       <span className={styles.heading}>Community Guidelines</span>
       <div className={styles['main-content']}>
         <div className={styles['left-col']}>

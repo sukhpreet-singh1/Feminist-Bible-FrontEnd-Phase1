@@ -26,32 +26,32 @@ export default function Footer() {
           <div className={styles['col-1']}>
             <ul>
               <span className={styles.heading}>Navigation</span>
-              <li className={styles.list}>Feed</li>
-              <li className={styles['list-1']}>About</li>
-              <li className={styles['list-1']}>Donate</li>
-              <li className={styles['list-1']}>Login</li>
+              <li className={styles.list}><a href="/">Feed</a></li>
+              <li className={styles['list-1']}><a href="/">About</a></li>
+              <li className={styles['list-1']}><a href="/">Donate</a></li>
+              <li className={styles['list-1']}><a href="/">Login</a></li>
             </ul>
           </div>
           <div className={styles['col-2']}>
             <ul>
               {' '}
               <span className={styles.heading}>Resources</span>
-              <li className={styles.list}>Terms &amp; Conditions</li>
-              <li className={styles['list-1']}>Privacy Policy</li>
-              <li className={styles['list-1']}>News</li>
-              <li className={styles['list-1']}>FAQ</li>
-              <li className={styles['list-1']}>Sister Platform</li>
+              <li className={styles.list}><a href="/">Terms &amp; Conditions</a></li>
+              <li className={styles['list-1']}><a href="/">Privacy Policy</a></li>
+              <li className={styles['list-1']}><a href="/">News</a></li>
+              <li className={styles['list-1']}><a href="/">FAQ</a></li>
+              <li className={styles['list-1']}><a href="/">Sister Platform</a></li>
             </ul>
           </div>
           <div className={styles['col-3']}>
             <ul>
               {' '}
               <span className={styles.heading}>Connect</span>
-              <li className={styles.list}>Facebook</li>
-              <li className={styles['list-1']}>Twitter</li>
-              <li className={styles['list-1']}>Slack</li>
-              <li className={styles['list-1']}>Instagram</li>
-              <li className={styles['list-1']}>Linkedin</li>
+              <li className={styles.list}><a href="/">Facebook</a></li>
+              <li className={styles['list-1']}><a href="/">Twitter</a></li>
+              <li className={styles['list-1']}><a href="/">Slack</a></li>
+              <li className={styles['list-1']}><a href="/">Instagram</a></li>
+              <li className={styles['list-1']}><a href="/">Linkedin</a></li>
             </ul>
           </div>
         </div>

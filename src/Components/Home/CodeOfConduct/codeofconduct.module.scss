@@ -14,13 +14,13 @@
 
 .heading {
   display: block;
-  margin: 50px auto auto auto;
+  margin:50px auto auto auto;
   text-align: center;
   font-size: 50px;
   padding-bottom: 1rem;
   font-family:$sub-heading-font;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 67px;
   color: #FFF7FB;
 }
@@ -73,6 +73,7 @@ div.right-col ul li{
   .main-content {
     flex-direction: column;
     padding: 0;
+    margin:auto;
   }
 
   .right-col {

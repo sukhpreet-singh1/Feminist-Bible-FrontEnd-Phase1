@@ -5,6 +5,8 @@ import styles from './meet.module.scss';
 const Meet = () => {
   return (
     <div className={styles.container}>
+      <p className={styles.slant} />
+      <div className={styles.slanted} />
       <span className={styles.heading}>Meet Maybelyn &amp; Rashmeet</span>
       <div className={styles['main-content']}>
         <div className={styles['col-1']}>

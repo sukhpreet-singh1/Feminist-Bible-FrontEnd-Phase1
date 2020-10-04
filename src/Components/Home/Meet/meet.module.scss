@@ -4,8 +4,25 @@
     background-color:#FFF7FB;
     width: 100%;
     padding: 1rem;  
+    position:relative;
   }
+  .slant{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 0;
+    margin: 0;
+  }
+  .slanted {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    border-left: 150px solid transparent;
+    border-top: 150px solid #4A2343;
 
+  }
 .heading {
   display: block;
   margin: 50px auto auto auto;
@@ -14,7 +31,7 @@
   padding-bottom: 1rem;
   font-family:$sub-heading-font;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 67px;
   color: #2E2E2E;
 }
