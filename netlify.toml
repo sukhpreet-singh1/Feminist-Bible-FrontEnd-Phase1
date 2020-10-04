@@ -1,0 +1,4 @@
+## netlify.toml
+[build]
+  command = "npm build && npm export"
+  publish = "out"
