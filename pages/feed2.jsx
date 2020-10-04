@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FeedPage2 from '../src/Components/feed/feed2';
+import FeedPage2 from '../src/Components/Feed/feed2';
 import Layout from '../src/Hoc/Layout';
 
 const Feed2 = () => {
