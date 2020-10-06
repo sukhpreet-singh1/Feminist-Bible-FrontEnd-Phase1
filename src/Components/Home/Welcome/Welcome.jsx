@@ -29,7 +29,7 @@ const Welcome = () => {
       <a href="/feed">
         <button type="button" className={styles.button}>
           {' '}
-          GO TO FEED
+          START READING
         </button>
       </a>
     </div>
