@@ -1,0 +1,171 @@
+@import '../../scss/variables';
+
+.outer-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.container {
+  margin: auto;
+  padding: 2rem 3rem;
+  width: 75%;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  a {
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-weight: 600;
+    color: $violet-shade;
+    font-size: 2rem;
+  }
+}
+
+.close-button {
+  font-weight: 500;
+  width: fit-content;
+  float: right;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  span {
+    font-weight: 600;
+  }
+
+  input {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background: #e7edf3;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    border: 0.4px solid #2e2e2e31;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  width: 18rem;
+  background-color: $background-yellow;
+  margin: 0.5rem 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  img {
+    max-width: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+}
+
+.right {
+  width: 50%;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.login-button {
+  background-color: $violet-shade;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    padding: 1rem;
+    width: 90%;
+  }
+  .top-row {
+    flex-direction: column-reverse;
+  }
+  .left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    width: 50%;
+    align-items: center;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .login-button {
+    margin-bottom: 1rem;
+  }
+}
+
+.break {
+  width: 18rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.break span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+}

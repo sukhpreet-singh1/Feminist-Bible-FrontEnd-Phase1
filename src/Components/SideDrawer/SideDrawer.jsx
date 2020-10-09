@@ -13,7 +13,7 @@ export default function SideDrawer({ toggleSideDrawer }) {
             type="button"
             className={styles['close-button']}
             onClick={toggleSideDrawer}>
-            <img src="/icons/hamburger.svg" alt="Menu" />
+            <img src="/icons/cross.png" alt=" X " />
           </button>
         </span>
         <a href="/" onClick={toggleSideDrawer}>

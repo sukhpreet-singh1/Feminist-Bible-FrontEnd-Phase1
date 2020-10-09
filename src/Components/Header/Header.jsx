@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
+import Login from '../Login/Login';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import styles from './header.module.scss';
 
 export default function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
   useEffect(() => {
-    if (openDrawer === true) {
+    if (openDrawer === true || loginOpen === true) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [openDrawer]);
+  }, [openDrawer, loginOpen]);
   const toggleSideDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
@@ -27,7 +29,11 @@ export default function Header() {
           {' '}
           SIGNUP{' '}
         </button>
-        <button type="button" id={styles.login} className={styles.button}>
+        <button
+          type="button"
+          id={styles.login}
+          className={styles.button}
+          onClick={() => setLoginOpen(!loginOpen)}>
           {' '}
           LOGIN{' '}
         </button>
@@ -40,6 +46,7 @@ export default function Header() {
         </button>
       </div>
       {openDrawer && <SideDrawer toggleSideDrawer={toggleSideDrawer} />}
+      {loginOpen && <Login toggleLogin={() => setLoginOpen(!loginOpen)} />}
     </div>
   );
 }
