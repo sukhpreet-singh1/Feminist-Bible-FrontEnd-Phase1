@@ -14,6 +14,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropdown-select": "^4.5.2",
     "react-firebase-file-uploader": "^2.4.3",
     "react-move": "^6.1.0",
     "react-reveal": "^1.2.2",

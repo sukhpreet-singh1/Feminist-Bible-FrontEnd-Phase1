@@ -62,7 +62,7 @@
     font-weight: 600;
   }
 
-  input {
+  .input {
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
     background: #e7edf3;
@@ -99,6 +99,7 @@
   img {
     height: 100%;
     width: 100%;
+    max-height: 450px;
   }
 }
 
@@ -106,21 +107,69 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
 }
 
-.login-button {
+.continue-button {
   background-color: $violet-shade;
   color: #fff;
   padding: 0.5rem 1.5rem;
   margin-right: 1rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.anchor-button {
-  color: blue;
-  margin: 0;
-  text-decoration: underline;
-  padding: 0;
+.page2-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown {
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+  border: 0.4px solid #2e2e2e31;
+  background: #e7edf3;
+  height: 3.25rem;
+  width: 100% !important;
+}
+
+.skip-button {
+  background-color: $background-yellow;
+  font-weight: 300;
+  padding: 0.5rem 1.5rem;
+
+  width: max-content;
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.signup-button {
+  background-color: $violet-shade;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  margin: auto;
+  width: max-content;
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+// Search on SIgnUp2
+.content-render {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  border: none;
+  font-size: 1.25rem;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.item {
+  padding: 0.5rem;
+  background: #e7edf3;
 }
 
 @media only screen and (max-width: 850px) {
@@ -148,7 +197,7 @@
     padding: 0.5rem 0;
   }
 
-  .login-button {
+  .continue-button {
     margin-bottom: 1rem;
   }
 }
@@ -164,6 +213,13 @@
 .break span {
   background: #fff;
   padding: 0 10px;
+}
+
+.anchor-button {
+  color: blue;
+  margin: 0;
+  text-decoration: underline;
+  padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
