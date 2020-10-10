@@ -124,16 +124,6 @@
   flex-direction: column;
 }
 
-.dropdown {
-  padding: 0.5rem 1rem;
-  position: relative;
-  margin-bottom: 2rem;
-  border: 0.4px solid #2e2e2e31;
-  background: #e7edf3;
-  height: 3.25rem;
-  width: 100% !important;
-}
-
 .skip-button {
   background-color: $background-yellow;
   font-weight: 300;
@@ -155,6 +145,24 @@
 }
 
 // Search on SIgnUp2
+.dropdown {
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+  border: 0.4px solid #2e2e2e31;
+  background: #e7edf3;
+  height: 3.25rem;
+  width: 100% !important;
+  svg {
+    width: 2rem !important;
+    height: 2rem !important;
+    fill: $violet-shade !important;
+  }
+}
+.react-dropdown-select-dropdown {
+  width: 100% !important;
+}
+
 .content-render {
   display: flex;
   justify-content: center;
@@ -165,6 +173,7 @@
   font-size: 1.25rem;
   background: transparent;
   padding: 0.5rem;
+  width: 80%;
 }
 
 .item {

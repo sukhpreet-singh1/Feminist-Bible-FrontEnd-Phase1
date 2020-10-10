@@ -27,6 +27,7 @@ export default function Page2({ setTab }) {
             onChange={(value) => console.log(value)}
             placeholder="Search"
             addPlaceholder="Search"
+            dropdownHeight="200px"
             multi
             searchable
             searchBy="value"
