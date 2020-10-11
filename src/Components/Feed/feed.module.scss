@@ -1,7 +1,5 @@
-@import '../../scss/variables';
-
 .container {
-  margin: 1rem 12rem;
+  margin: 1rem 10%;
   h2 {
     margin: 1rem auto;
   }
@@ -43,6 +41,7 @@
   }
 }
 .right_side_articles {
+  width: 100%;
   img {
     width: 167px;
     height: 115px;
@@ -61,7 +60,7 @@
 }
 .LS_community {
   display: flex;
-  width: 133%;
+  width: 100%;
   flex-direction: row;
   margin-bottom: 1rem;
   margin-right: 2rem;
@@ -97,6 +96,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 0;
   box-sizing: border-box;
   padding: 10px 20px;
   img {
@@ -108,5 +108,56 @@
     color: #4a2343;
     font-size: 15px;
     width: 80px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #search {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .container {
+    margin: 1rem 1rem;
+    img {
+      width: 126px;
+      height: 121px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .heading {
+    h2 {
+      font-size: 100%;
+    }
+    button {
+      font-size: 10px;
+      margin: 10px auto;
+      height: 22px;
+    }
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .left_side_article {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .quote {
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 2rem;
+    }
+    img {
+      width: 20px;
+      height: auto;
+    }
   }
 }
