@@ -1,0 +1,161 @@
+@import '../../../scss/variables';
+
+.container {
+  width: 100%;
+  padding: 2.5rem;
+  background: linear-gradient(325deg, $pink-shade 45%, $background-yellow 45%);
+  padding-bottom:0;
+  overflow-x:hidden;
+}
+
+
+.heading {
+  display: block;
+  font-weight: 400;
+  font-size: 50px;
+  padding-bottom: 1rem;
+  margin-top:100px;
+  margin-bottom:10px;
+  font-family: $sub-heading-font;
+  color: #4A2343;
+  border-bottom: 1px solid #4A2343;
+  
+}
+.belowheading
+{
+  font-style: italic;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 39px;
+  color: #000000;
+}
+.main-content
+{
+    display:flex;
+    
+}
+.left-col
+{
+    margin-left:1.5rem;
+    width:383px;
+    ul{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    color: #2E2E2E;
+    padding-bottom:4px;
+    padding:2rem 0 2rem 1rem;
+    }
+    .list
+    {
+    background: #FFF6FB;
+    border: 0.5px solid #4A2343;
+    box-sizing: border-box;
+    padding-left:2rem;
+    list-style: none;
+
+    }
+    li {
+        margin-bottom:0.8rem;
+        font-size:20px;
+
+    }
+    a {
+        color: #3A37DB;
+
+    }
+}
+.right-col
+{
+        padding-top:100px;
+        
+        margin-right: 50px;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 900;
+        max-height: 900px;
+      }
+}
+.quote-div {
+  display: block;
+  margin: 10.5rem auto;
+  position: relative;
+  width: 75%;
+  padding: 1.5rem;
+  background-color:#FFFFFF;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.25);
+  img {
+    max-width: 2rem;
+    max-height: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+
+  }
+  p {
+    width: 80%;
+    position: relative;
+    top: 5%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: $violet-shade;
+    font-family: $sub-heading-font;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .belowheading{
+    font-size:1rem;
+  }
+
+  .quote-div {
+    width: 100%;
+    padding: 0.5rem;
+    img {
+        top: 2.5%;
+        left: 5%;
+      }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+  .main-content {
+    flex-direction: column;
+    padding: 0;
+    margin:auto;
+    
+    .left-col{
+      width:100%;
+      text-align:center;
+      margin:0;
+      .list{
+        padding:0;
+      }
+      ul{
+        font-size:1.25rem;
+      }
+      li {
+        font-size:1rem;
+      }
+    }
+    .right-col {
+      text-align:center;
+      margin:auto;
+      img {
+        max-height: 500px;
+        max-width: 500px;
+        margin-right:0;
+      }
+    }
+  }
+
+}

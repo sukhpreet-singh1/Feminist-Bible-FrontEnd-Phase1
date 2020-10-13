@@ -36,8 +36,8 @@ export default function Footer() {
             <ul>
               {' '}
               <span className={styles.heading}>Resources</span>
-              <li className={styles.list}><a href="/">Terms &amp; Conditions</a></li>
-              <li className={styles['list-1']}><a href="/">Privacy Policy</a></li>
+              <li className={styles.list}><a href="/communitycode">Terms &amp; Conditions</a></li>
+              <li className={styles['list-1']}><a href="/communitycode">Privacy Policy</a></li>
               <li className={styles['list-1']}><a href="/">News</a></li>
               <li className={styles['list-1']}><a href="/">FAQ</a></li>
               <li className={styles['list-1']}><a href="/">Sister Platform</a></li>
