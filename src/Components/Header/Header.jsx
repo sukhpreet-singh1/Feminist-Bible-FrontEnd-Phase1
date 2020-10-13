@@ -2,18 +2,20 @@ import React, { useEffect, useState } from 'react';
 
 import Login from '../Login/Login';
 import SideDrawer from '../SideDrawer/SideDrawer';
+import SignUp from '../SignUp/SignUp';
 import styles from './header.module.scss';
 
 export default function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
+  const [signUpOpen, setSignUpOpen] = useState(false);
   useEffect(() => {
-    if (openDrawer === true || loginOpen === true) {
+    if (openDrawer === true || loginOpen === true || signUpOpen === true) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [openDrawer, loginOpen]);
+  }, [openDrawer, loginOpen, signUpOpen]);
   const toggleSideDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
@@ -25,8 +27,11 @@ export default function Header() {
       </div>
 
       <div className={styles['right-col']}>
-        <button type="button" id={styles.signup} className={styles.button}>
-          {' '}
+        <button
+          type="button"
+          id={styles.signup}
+          className={styles.button}
+          onClick={() => setSignUpOpen(!signUpOpen)}>
           SIGNUP{' '}
         </button>
         <button
@@ -45,8 +50,29 @@ export default function Header() {
           <img src="/icons/hamburger.svg" alt="Menu" />
         </button>
       </div>
-      {openDrawer && <SideDrawer toggleSideDrawer={toggleSideDrawer} />}
-      {loginOpen && <Login toggleLogin={() => setLoginOpen(!loginOpen)} />}
+
+      {/** ============================= Side Drawer ============================= */}
+      {openDrawer && (
+        <SideDrawer
+          toggleSideDrawer={toggleSideDrawer}
+          toggleLogin={() => setLoginOpen(!loginOpen)}
+          toggleSignUp={() => setSignUpOpen(!signUpOpen)}
+        />
+      )}
+      {/** ============================= Login PopUp ============================= */}
+      {loginOpen && (
+        <Login
+          toggleLogin={() => setLoginOpen(!loginOpen)}
+          toggleSignUp={() => setSignUpOpen(!signUpOpen)}
+        />
+      )}
+      {/** ============================= SignUp PopUp ============================= */}
+      {signUpOpen && (
+        <SignUp
+          toggleSignUp={() => setSignUpOpen(!signUpOpen)}
+          toggleLogin={() => setLoginOpen(!loginOpen)}
+        />
+      )}
     </div>
   );
 }

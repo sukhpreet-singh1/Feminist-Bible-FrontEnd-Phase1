@@ -4,7 +4,11 @@ import React from 'react';
 
 import styles from './sideDrawer.module.scss';
 
-export default function SideDrawer({ toggleSideDrawer }) {
+export default function SideDrawer({
+  toggleSideDrawer,
+  toggleLogin,
+  toggleSignUp
+}) {
   return (
     <div className={styles['outer-container']}>
       <div className={styles.container}>
@@ -16,6 +20,22 @@ export default function SideDrawer({ toggleSideDrawer }) {
             <img src="/icons/cross.png" alt=" X " />
           </button>
         </span>
+        <button
+          onClick={() => {
+            toggleLogin();
+            toggleSideDrawer();
+          }}
+          type="button">
+          Login
+        </button>
+        <button
+          onClick={() => {
+            toggleSignUp();
+            toggleSideDrawer();
+          }}
+          type="button">
+          Sign Up
+        </button>
         <a href="/" onClick={toggleSideDrawer}>
           HOME
         </a>
@@ -60,5 +80,7 @@ export default function SideDrawer({ toggleSideDrawer }) {
 }
 
 SideDrawer.propTypes = {
-  toggleSideDrawer: PropTypes.func.isRequired
+  toggleSideDrawer: PropTypes.func.isRequired,
+  toggleLogin: PropTypes.func.isRequired,
+  toggleSignUp: PropTypes.func.isRequired
 };

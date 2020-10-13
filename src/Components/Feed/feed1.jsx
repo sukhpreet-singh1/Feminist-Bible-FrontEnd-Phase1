@@ -5,14 +5,14 @@ import styles from './feed.module.scss';
 const FeedPage1 = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>
-        <h2>
+      <div className={styles.heading} style={{ flexFlow: 'wrap-reverse' }}>
+        <h2 style={{ fontSize: '20px' }}>
           <strong style={{ color: '#ab1d79' }}>
             Adventures of Vita &amp; Akira
           </strong>
         </h2>
-        <button id={styles.search}>
-          <img src="/icons/search2.png" />
+        <button id={styles.search} type="button">
+          <img src="/icons/search2.png" alt="" />
           <span>
             <input
               style={{ border: 'none' }}
@@ -39,8 +39,7 @@ const FeedPage1 = () => {
               <strong>Exploring the depths on the Internet</strong>
             </h2>
             <p>Lorem ipsum sig mundus creatus est.</p>
-            <h2>Tiffany Grant</h2>
-            <h2>Aug 2, 2020</h2>
+            <p className={styles.h2}>Tiffany Grant Aug 2, 2020</p>
           </div>
         </div>
         <div className={styles.right_side_articles}>
@@ -76,77 +75,53 @@ const FeedPage1 = () => {
           </div>
         </div>
       </div>
-      <div
-        className="community"
-        style={{ display: 'flex', flexDirection: 'row', margin: '3rem auto' }}>
-        <div>
-          <h2 style={{ margin: '0 auto 1rem' }}>
-            <strong style={{ color: '#ab1d79' }}>Articles</strong>
-          </h2>
-          <div className={styles.LS_community}>
-            <img src="../images/desktop-img3.png" alt="" />
-            <div>
-              <h2>
-                <strong>What I learnt from rediscovering my passions</strong>
-              </h2>
-              <p>
-                Lorem ipsum sig mundus creatus est. Lorem ipsum sig mundus
-                creatus est.
-              </p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
+      <div className="community" style={{ margin: '3rem auto' }}>
+        <h2 style={{ margin: '0 auto 1rem' }}>
+          <strong style={{ color: '#ab1d79' }}>Articles</strong>
+        </h2>
+        <div className={styles.LS_community}>
+          <img src="../images/desktop-img3.png" alt="" />
+          <div>
+            <h2>
+              <strong>What I learnt from rediscovering my passions</strong>
+            </h2>
+            <p>Tiffany Grant Aug 2, 2020</p>
           </div>
-          <div className={styles.LS_community}>
-            <img src="../images/desktop-img3.png" alt="" />
-            <div>
-              <h2>
-                <strong>What I learnt from rediscovering my passions</strong>
-              </h2>
-              <p>
-                Lorem ipsum sig mundus creatus est. Lorem ipsum sig mundus
-                creatus est.
-              </p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
+        </div>
+        <div className={styles.LS_community}>
+          <img src="../images/desktop-img3.png" alt="" />
+          <div>
+            <h2>
+              <strong>What I learnt from rediscovering my passions</strong>
+            </h2>
+            <p>Tiffany Grant Aug 2, 2020</p>
           </div>
-          <div className={styles.LS_community}>
-            <img src="../images/desktop-img3.png" alt="" />
-            <div>
-              <h2>
-                <strong>What I learnt from rediscovering my passions</strong>
-              </h2>
-              <p>
-                Lorem ipsum sig mundus creatus est. Lorem ipsum sig mundus
-                creatus est.
-              </p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
+        </div>
+        <div className={styles.LS_community}>
+          <img src="../images/desktop-img3.png" alt="" />
+          <div>
+            <h2>
+              <strong>What I learnt from rediscovering my passions</strong>
+            </h2>
+            <p>Tiffany Grant Aug 2, 2020</p>
           </div>
-          <div className={styles.LS_community}>
-            <img src="../images/desktop-img3.png" alt="" />
-            <div>
-              <h2>
-                <strong>What I learnt from rediscovering my passions</strong>
-              </h2>
-              <p>
-                Lorem ipsum sig mundus creatus est. Lorem ipsum sig mundus
-                creatus est.
-              </p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
+        </div>
+        <div className={styles.LS_community}>
+          <img src="../images/desktop-img3.png" alt="" />
+          <div>
+            <h2>
+              <strong>What I learnt from rediscovering my passions</strong>
+            </h2>
+            <p>Tiffany Grant Aug 2, 2020</p>
           </div>
-          <div className={styles.LS_community}>
-            <img src="../images/desktop-img3.png" alt="" />
-            <div>
-              <h2>
-                <strong>What I learnt from rediscovering my passions</strong>
-              </h2>
-              <p>
-                Lorem ipsum sig mundus creatus est. Lorem ipsum sig mundus
-                creatus est.
-              </p>
-              <p>Tiffany Grant Aug 2, 2020</p>
-            </div>
+        </div>
+        <div className={styles.LS_community}>
+          <img src="../images/desktop-img3.png" alt="" />
+          <div>
+            <h2>
+              <strong>What I learnt from rediscovering my passions</strong>
+            </h2>
+            <p>Tiffany Grant Aug 2, 2020</p>
           </div>
         </div>
       </div>
