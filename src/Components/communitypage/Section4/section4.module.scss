@@ -15,7 +15,7 @@
   font-size: 50px;
   padding-bottom: 1rem;
   margin-top:50px;
-  margin-bottom:80px;
+  margin-bottom:50px;
   font-family: $sub-heading-font;
   color: #2e2e2e;
   border-bottom: 1px solid #2e2e2e;
@@ -35,33 +35,32 @@
 
 .main-content {
     .text{
-        font-family: 'Montserrat';
+        font-family: Poppins;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
-        line-height: 24px; 
+        line-height: 30px;
         color: #000000;
-        
+        margin-left:5rem;
     }
-    .text-1{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #2E2E2E;
-    display:inline-block;
-    margin-top:50px;
-    margin-left:5rem;
+    .second
+    {
+        position:relative;
+        padding-top:40px;
+        ul {
+            list-style-image: url('/icons/star.svg');
+          }
+          li {
+            margin-bottom:0.5rem;
+          }
+          .third
+          {
+              position:absolute;
+              left:36%;
+          }
     }
-  ul {
-    list-style-image: url('/icons/star.svg');
-  }
-  li {
-    margin-bottom:1rem;
-  }
-}
 
+}
 @media only screen and (max-width: 850px) {
     .heading1, .heading2 {
       font-size: 1.5rem;
@@ -70,8 +69,15 @@
       flex-direction: column;
       padding: 0;
       margin:auto;
-      .text, .text-1{
+      .text{
           font-size:1rem;
+      }
+      .second{
+          position:relative;
+          .third{
+            position:absolute;
+            left:60%;
+        }
       }
       
       
