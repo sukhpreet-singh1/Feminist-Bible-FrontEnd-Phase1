@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+
+import UserContext from '../Context/UserContext';
 
 import Login from '../Login/Login';
 import SideDrawer from '../SideDrawer/SideDrawer';
@@ -9,6 +11,11 @@ export default function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const [signUpOpen, setSignUpOpen] = useState(false);
+  const { User } = useContext(UserContext);
+
+  /*
+    =========================== Side Drawer , Login, Signup Open. set overflow to hidden ===========================
+  */
   useEffect(() => {
     if (openDrawer === true || loginOpen === true || signUpOpen === true) {
       document.body.style.overflow = 'hidden';
@@ -16,6 +23,7 @@ export default function Header() {
       document.body.style.overflow = 'auto';
     }
   }, [openDrawer, loginOpen, signUpOpen]);
+
   const toggleSideDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
@@ -27,21 +35,39 @@ export default function Header() {
       </div>
 
       <div className={styles['right-col']}>
-        <button
-          type="button"
-          id={styles.signup}
-          className={styles.button}
-          onClick={() => setSignUpOpen(!signUpOpen)}>
-          SIGNUP{' '}
-        </button>
-        <button
-          type="button"
-          id={styles.login}
-          className={styles.button}
-          onClick={() => setLoginOpen(!loginOpen)}>
-          {' '}
-          LOGIN{' '}
-        </button>
+        {/* =================== No User logged In ======================= */}
+        {User === null && (
+          <>
+            <button
+              type="button"
+              id={styles.signup}
+              className={styles.button}
+              onClick={() => setSignUpOpen(!signUpOpen)}>
+              SIGNUP{' '}
+            </button>
+            <button
+              type="button"
+              id={styles.login}
+              className={styles.button}
+              onClick={() => setLoginOpen(!loginOpen)}>
+              {' '}
+              LOGIN{' '}
+            </button>
+          </>
+        )}
+
+        {/* =================== User is logged In ======================= */}
+        {User !== null && (
+          <>
+            <button
+              type="button"
+              className={styles.button}
+              id={styles.notification}>
+              <img src="/icons/notification.png" alt="Notifications" />
+            </button>
+            <img src="/test/user1.png" id={styles['user-image']} alt="User" />
+          </>
+        )}
         <button
           type="button"
           id={styles.menu}
@@ -57,6 +83,7 @@ export default function Header() {
           toggleSideDrawer={toggleSideDrawer}
           toggleLogin={() => setLoginOpen(!loginOpen)}
           toggleSignUp={() => setSignUpOpen(!signUpOpen)}
+          User={User}
         />
       )}
       {/** ============================= Login PopUp ============================= */}

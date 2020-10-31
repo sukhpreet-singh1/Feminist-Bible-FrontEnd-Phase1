@@ -20,7 +20,7 @@ const Welcome = () => {
 
         <div className={styles['right-col']}>
           <img
-            src="../images/welcome.svg"
+            src="/images/welcome.svg"
             alt="Welcome"
             style={{ borderRadius: '5px' }}
           />

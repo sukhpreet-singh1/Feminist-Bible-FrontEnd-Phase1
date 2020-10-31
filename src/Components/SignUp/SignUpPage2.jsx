@@ -6,7 +6,7 @@ import Select from 'react-dropdown-select';
 
 import styles from './signUp.module.scss';
 
-export default function Page2({ setTab }) {
+export default function Page2({ setTab, submitSignUpForm }) {
   const options = [
     { id: '0', value: 'Art' },
     { id: '1', value: 'Fiction' },
@@ -23,7 +23,7 @@ export default function Page2({ setTab }) {
         <div className={styles.left}>
           <Select
             options={options}
-            className={styles['dropdown']}
+            className={styles.dropdown}
             onChange={(value) => console.log(value)}
             placeholder="Search"
             addPlaceholder="Search"
@@ -80,7 +80,8 @@ export default function Page2({ setTab }) {
             <button
               type="button"
               className={styles['signup-button']}
-              tabIndex={0}>
+              tabIndex={0}
+              onClick={submitSignUpForm}>
               SIGN UP
             </button>
             <p>
@@ -98,7 +99,7 @@ export default function Page2({ setTab }) {
           </div>
         </div>
         <div className={styles.right}>
-          <img src="./images/signup2.png" alt="" />
+          <img src="/images/signup2.png" alt="" />
         </div>
       </div>
       {/** ========================================== Top Row Ends ========================================== */}
@@ -107,5 +108,6 @@ export default function Page2({ setTab }) {
 }
 
 Page2.propTypes = {
-  setTab: PropTypes.func.isRequired
+  setTab: PropTypes.func.isRequired,
+  submitSignUpForm: PropTypes.func.isRequired
 };

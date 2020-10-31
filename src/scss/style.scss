@@ -5,7 +5,7 @@
   box-sizing: border-box;
   outline: none;
   font-family: $text-font;
-  color: $heading-color;
+  color: $text-color;
 }
 
 a {
@@ -25,4 +25,13 @@ button {
 
 .homepage-container {
   background: linear-gradient(325deg, $pink-shade 45%, $background-yellow 45%);
+}
+
+.error {
+  border-color: rgb(219, 39, 39) !important;
+  border-width: 0.17rem !important;
+}
+.error-message {
+  color: rgb(202, 18, 18);
+  font-weight: lighter;
 }

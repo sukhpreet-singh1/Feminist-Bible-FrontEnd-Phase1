@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Communitypage from '../src/Components/communitypage';
-import Layout from '../src/Hoc/Layout2';
+import Layout from '../src/Hoc/Layout';
 
 const Home = () => {
   return (

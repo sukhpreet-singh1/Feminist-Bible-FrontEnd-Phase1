@@ -27,6 +27,9 @@
         "groups": ["builtin", "external", ["parent", "sibling", "index"]],
         "newlines-between": "always-and-inside-groups"
       }
-    ]
+    ],
+    "no-lone-blocks": "off",
+    "no-underscore-dangle": "off",
+    "no-async-promise-executor": "off"
   }
 }

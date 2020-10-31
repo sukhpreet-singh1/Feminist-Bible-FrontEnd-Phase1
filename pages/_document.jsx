@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html lang="id">
         <Head>
-          <link rel="icon" type="image/x-icon" href="../images/logo.png" />
+          <link rel="icon" type="image/x-icon" href="/images/logo.png" />
         </Head>
         <body className="custom_class">
           <Main />

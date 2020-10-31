@@ -4,7 +4,20 @@ import React from 'react';
 
 import styles from './signUp.module.scss';
 
-export default function Page1({ toggleSignUp, toggleLogin, setTab }) {
+export default function Page1({
+  toggleSignUp,
+  toggleLogin,
+  setTab,
+  name,
+  password,
+  email,
+  setName,
+  setEmail,
+  setPassword,
+  nameError,
+  emailError,
+  passwordError
+}) {
   return (
     <div>
       {/** ========================================== Top Row ========================================== */}
@@ -14,11 +27,11 @@ export default function Page1({ toggleSignUp, toggleLogin, setTab }) {
       <div className={styles['top-row']}>
         <div className={styles.left}>
           <button type="button" className={styles.button}>
-            <img src="./icons/google.png" alt="" />
+            <img src="/icons/google.png" alt="" />
             Continue with Google
           </button>
           <button type="button" className={styles.button}>
-            <img src="./icons/facebook.png" alt="" />
+            <img src="/icons/facebook.png" alt="" />
             Continue with Facebook
           </button>
           <div className={styles.break}>
@@ -27,19 +40,45 @@ export default function Page1({ toggleSignUp, toggleLogin, setTab }) {
           <form className={styles.form}>
             <input
               type="text"
-              className={styles.input}
-              placeholder="USERNAME"
+              className={`${styles.input} ${
+                nameError !== null ? 'error' : ''
+              } `}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.currentTarget.value)}
             />
+            {nameError && <span className="error-message">{nameError}</span>}
+            <input
+              type="email"
+              className={`${styles.input} ${
+                emailError !== null ? 'error' : ''
+              } `}
+              placeholder="Email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.currentTarget.value);
+              }}
+            />
+
+            {emailError && <span className="error-message">{emailError}</span>}
             <input
               type="password"
-              className={styles.input}
-              placeholder="PASSWORD"
+              className={`${styles.input} ${
+                passwordError !== null ? 'error' : ''
+              } `}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.currentTarget.value);
+              }}
             />
-            <input type="email" className={styles.input} placeholder="EMAIL" />
+            {passwordError && (
+              <span className="error-message">{passwordError}</span>
+            )}
           </form>
         </div>
         <div className={styles.right}>
-          <img src="./images/signup1.png" alt="" />
+          <img src="/images/signup1.png" alt="" />
         </div>
       </div>
       {/** ========================================== Top Row Ends ========================================== */}
@@ -74,5 +113,14 @@ export default function Page1({ toggleSignUp, toggleLogin, setTab }) {
 Page1.propTypes = {
   toggleSignUp: PropTypes.func.isRequired,
   toggleLogin: PropTypes.func.isRequired,
-  setTab: PropTypes.func.isRequired
+  setTab: PropTypes.func.isRequired,
+  setName: PropTypes.func.isRequired,
+  setEmail: PropTypes.func.isRequired,
+  setPassword: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  nameError: PropTypes.string.isRequired,
+  passwordError: PropTypes.string.isRequired,
+  emailError: PropTypes.string.isRequired
 };

@@ -19,6 +19,8 @@
 }
 
 .right-col {
+  display: flex;
+  align-items: center;
   .button {
     font-weight: 500;
     border: 2px solid $violet-shade;
@@ -33,6 +35,18 @@
     border: none;
   }
 
+  #notification {
+    border: none;
+    max-height: 3rem;
+  }
+
+  #user-image {
+    max-width: 3rem;
+    max-height: 3rem;
+    border-radius: 5rem;
+    margin: 0 1rem;
+  }
+
   #menu {
     border: none;
   }
@@ -40,7 +54,9 @@
 
 @media only screen and (max-width: 800px) {
   #login,
-  #signup {
+  #signup,
+  #notification,
+  #user-image {
     display: none;
   }
 

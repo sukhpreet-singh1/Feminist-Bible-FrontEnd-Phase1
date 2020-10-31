@@ -8,7 +8,7 @@ const About = () => {
       <span className={styles.heading}>About Feminist Bible</span>
       <div className={styles['main-content']}>
         <div className={styles['right-col']}>
-          <img src="../images/about.png" alt="" />
+          <img src="/images/about.png" alt="" />
         </div>
 
         <div className={styles['left-col']}>

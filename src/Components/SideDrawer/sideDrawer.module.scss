@@ -21,8 +21,16 @@
   min-width: 20rem;
   height: 100%;
   a {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     padding: 0.5rem;
+    img {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.5rem;
+      border-radius: 2rem;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -36,9 +44,45 @@
   float: right;
 }
 
+.auth-buttons-div {
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.button {
+  font-weight: 500;
+  width: 40%;
+  border: 2px solid $violet-shade;
+}
+
+#logout {
+  display: block;
+  margin: 1rem auto 0;
+  color: $violet-shade;
+}
+
+.user-panel {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .auth-buttons-div {
+    display: flex;
+  }
+
+  .user-panel {
+    display: initial;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .container {
     min-width: 0;
     width: 100%;
+  }
+
+  .close-button {
+    margin: 0;
   }
 }
