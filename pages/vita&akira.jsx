@@ -1,6 +1,6 @@
 import React from 'react';
 
-import VitaAndAkira from '../src/Components/feed/Vita&Akira';
+import VitaAndAkira from '../src/Components/Feed/Vita&Akira';
 import Layout from '../src/Hoc/Layout';
 
 const Feed1 = () => {

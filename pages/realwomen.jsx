@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RealWomen from '../src/Components/feed/RealWomen';
+import RealWomen from '../src/Components/Feed/RealWomen';
 import Layout from '../src/Hoc/Layout';
 
 const Feed2 = () => {

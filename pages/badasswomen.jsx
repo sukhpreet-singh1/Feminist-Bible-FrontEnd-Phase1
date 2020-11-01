@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BadassWomen from '../src/Components/feed/BadassWomen';
+import BadassWomen from '../src/Components/Feed/BadassWomen';
 import Layout from '../src/Hoc/Layout';
 
 const Feed3 = () => {
