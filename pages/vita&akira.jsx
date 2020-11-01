@@ -1,12 +1,12 @@
 import React from 'react';
 
-import FeedPage1 from '../src/Components/Feed/feed1';
+import VitaAndAkira from '../src/Components/feed/Vita&Akira';
 import Layout from '../src/Hoc/Layout';
 
 const Feed1 = () => {
   return (
     <Layout>
-      <FeedPage1 />
+      <VitaAndAkira />
     </Layout>
   );
 };

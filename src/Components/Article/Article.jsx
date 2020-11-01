@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { CommunityArticle } from '../Feed/articleComponent';
+
 import styles from './article.module.scss';
 
 const Article = () => {
@@ -186,33 +188,9 @@ const Article = () => {
         <h1 style={{ margin: '2rem auto' }}>
           <strong style={{ color: '#4A2343' }}>More From Productivity</strong>
         </h1>
-        <div className={styles.moreArticle}>
-          <img src="../images/desktop-img3.png" alt="" />
-          <div>
-            <h2>
-              <strong>What I learnt from rediscovering my passions</strong>
-            </h2>
-            <p>Tiffany Grant Aug 2, 2020</p>
-          </div>
-        </div>
-        <div className={styles.moreArticle}>
-          <img src="../images/desktop-img3.png" alt="" />
-          <div>
-            <h2>
-              <strong>What I learnt from rediscovering my passions</strong>
-            </h2>
-            <p>Tiffany Grant Aug 2, 2020</p>
-          </div>
-        </div>
-        <div className={styles.moreArticle}>
-          <img src="../images/desktop-img3.png" alt="" />
-          <div>
-            <h2>
-              <strong>What I learnt from rediscovering my passions</strong>
-            </h2>
-            <p>Tiffany Grant Aug 2, 2020</p>
-          </div>
-        </div>
+        <CommunityArticle />
+        <CommunityArticle />
+        <CommunityArticle />
       </div>
     </div>
   );
