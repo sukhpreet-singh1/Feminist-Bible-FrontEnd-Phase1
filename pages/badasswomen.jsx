@@ -1,12 +1,12 @@
 import React from 'react';
 
-import FeedPage3 from '../src/Components/Feed/feed3';
+import BadassWomen from '../src/Components/Feed/BadassWomen';
 import Layout from '../src/Hoc/Layout';
 
 const Feed3 = () => {
   return (
     <Layout>
-      <FeedPage3 />
+      <BadassWomen />
     </Layout>
   );
 };

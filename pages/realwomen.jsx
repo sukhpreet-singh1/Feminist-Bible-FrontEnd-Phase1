@@ -1,12 +1,12 @@
 import React from 'react';
 
-import FeedPage2 from '../src/Components/Feed/feed2';
+import RealWomen from '../src/Components/Feed/RealWomen';
 import Layout from '../src/Hoc/Layout';
 
 const Feed2 = () => {
   return (
     <Layout>
-      <FeedPage2 />
+      <RealWomen />
     </Layout>
   );
 };
