@@ -1,0 +1,129 @@
+@import '../../../scss/variables';
+
+.container {
+  width: 100%;
+  height:100%;
+  padding:2.5rem;
+  background-color:$background-yellow;
+  box-sizing:border-box;
+  padding-bottom:100px;
+  background: linear-gradient(35deg, $background-yellow 45%, $pink-shade 45%);
+  
+}
+
+.heading1, .heading2, .heading3, .heading4 {
+  display: block;
+  font-weight: 400;
+  font-size: 50px;
+  padding-bottom: 1rem;
+  margin-top:50px;
+  margin-bottom:50px;
+  font-family: $sub-heading-font;
+  color: #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+}
+.main-content {
+
+    div{
+        margin-top:20px;
+        font-weight:500;
+    }
+    .text-1, .text{
+        font-family: $text-font                         ;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        color: #000000;
+        display:inline-block;
+        margin-left:5rem;
+        li {
+            padding-top:15px;
+        }
+        }
+    ul {
+        list-style-image: url('/icons/star.svg');
+        margin-top:20px;
+        
+      }
+      li {
+        margin-bottom:0.5rem;
+
+      }
+     .text-2
+     {
+        font-family: $text-font;                         ;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        color: #000000;
+        display:inline-block;
+        padding-left:10rem;
+        padding-top:20px;
+     }
+     .sub-text, .list1, .list2, .list3, .list4{
+         margin-left:5rem;
+         font-family: $text-font ;                       ;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        color: #000000;
+        margin-top:20px;
+     }
+     .list2{
+         margin-top:60px;
+     }
+     .list3{
+         margin-top:30px;
+     }
+     .list4{
+         margin-top:40px;
+     }
+     .sub-text2, .sub-text3{
+        margin-left:5rem;
+        font-family: $text-font                         ;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 20px;
+       line-height: 26px;
+       color: #000000;
+       display:inline-block;
+       padding-top:20px;
+     }
+     .text1, .text2{
+        font-family: $text-font                         ;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        color: #000000;
+        display:inline-block;
+        margin-left:5rem;
+        
+     }
+}
+.heading5{
+    display: block;
+  font-weight: 400;
+  font-size: 50px;
+  padding-bottom: 1rem;
+  margin-top:50px;
+  margin-bottom:50px;
+  font-family: $sub-heading-font;
+  color:#F8F9FB;
+  border-bottom: 1px solid#F8F9FB;
+}
+.main-content1{
+    background-image: linear-gradient(325deg, #FFFFFF 0%, #4A2343 100%) ;
+    font-family: $text-font ;                        ;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        color: #F8F9FB;
+        display:inline-block;
+        margin-left:5rem;
+        
+}

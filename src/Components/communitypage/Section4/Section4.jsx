@@ -14,7 +14,7 @@ const Section4 = () => {
           <div className={styles.text}><div className={styles.first}>You will not knowingly share any content, stories, profiles, copyrighted, and or trademarked by another person or entity. We will immediately delete any content we determine to be plagiarized and do not follow community guidelines and conduct codes.
 
         </div>
-        <div className={styles.second}>Feminist Bible retains trademarks on the following :
+        <div className={styles.second}>Feminist Bible retains trademarks on the following:
         <ul className={styles.third}>
             <li>&quot;Feminist Bible&quot;</li>
             <li>&quot;The Feminist Bible&quot;</li>
