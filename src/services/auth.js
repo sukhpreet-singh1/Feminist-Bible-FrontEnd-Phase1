@@ -10,8 +10,8 @@ export const signUp = async (name, email, password) => {
   return new Promise(async (resolve, reject) => {
     try {
       const data = {
-        name,
         email,
+        name,
         password
       };
       const res = await axios.post(`${baseURL}/signup`, data);

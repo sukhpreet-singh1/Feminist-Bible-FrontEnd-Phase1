@@ -1,14 +1,9 @@
 import React from 'react';
 
 import VitaAndAkira from '../src/Components/Feed/Vita&Akira';
-import Layout from '../src/Hoc/Layout';
 
 const Feed1 = () => {
-  return (
-    <Layout>
-      <VitaAndAkira />
-    </Layout>
-  );
+  return <VitaAndAkira />;
 };
 
 export default Feed1;

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 import React, { useContext } from 'react';
 
-
 import { logout } from '../../services/auth';
 import UserContext from '../Context/UserContext';
 import styles from './sideDrawer.module.scss';
@@ -48,6 +47,8 @@ export default function SideDrawer({
             </button>
           </div>
         )}
+        {/** ============================ Logged In User is There ============================ */}
+
         {User !== null && (
           <div className={styles['user-panel']}>
             {' '}
@@ -55,13 +56,14 @@ export default function SideDrawer({
               <img alt="" src="/icons/notification.png" />
               NOTIFICATIONS
             </a>
-            <a href="/" onClick={toggleSideDrawer}>
+            <a href="/profile" onClick={toggleSideDrawer}>
               <img alt="" src="/test/user1.png" />
               PROFILE
             </a>
             <hr />
           </div>
         )}
+
         <a href="/" onClick={toggleSideDrawer}>
           HOME
         </a>
@@ -112,9 +114,18 @@ export default function SideDrawer({
   );
 }
 
+SideDrawer.defaultProps = {
+  User: null
+};
+
 SideDrawer.propTypes = {
   toggleSideDrawer: PropTypes.func.isRequired,
   toggleLogin: PropTypes.func.isRequired,
   toggleSignUp: PropTypes.func.isRequired,
-  User: PropTypes.object.isRequired
+  User: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    id: PropTypes.string,
+    role: PropTypes.string
+  })
 };

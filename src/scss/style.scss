@@ -23,6 +23,11 @@ button {
   background: none;
 }
 
+:disabled {
+  opacity: 0.5;
+  cursor: initial;
+}
+
 .homepage-container {
   background: linear-gradient(325deg, $pink-shade 45%, $background-yellow 45%);
 }
@@ -33,5 +38,6 @@ button {
 }
 .error-message {
   color: rgb(202, 18, 18);
-  font-weight: lighter;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }

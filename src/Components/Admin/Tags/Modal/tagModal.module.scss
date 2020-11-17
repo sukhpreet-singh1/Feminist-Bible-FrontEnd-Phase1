@@ -1,0 +1,119 @@
+@import '../../../../scss/variables';
+
+.container {
+  background-color: $background-yellow;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  overflow: scroll !important;
+}
+
+.inner-container {
+  width: 75%;
+  margin: auto;
+  h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}
+
+.close-button {
+  font-weight: 500;
+  width: fit-content;
+  float: right;
+}
+
+.tag-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  border-radius: 1rem;
+  padding: 0.15rem 0.5rem;
+  min-width: 3rem;
+  width: fit-content;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  b {
+    margin-right: 1rem;
+  }
+}
+
+.delete-button {
+  background: red;
+  margin: auto;
+  width: fit-content;
+  color: #fff;
+  border-radius: 0.2rem;
+  margin-top: 2rem;
+}
+
+.add-new-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75%;
+  textarea {
+    resize: none;
+  }
+}
+
+.input {
+  background-color: #fff;
+  border: solid transparent;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+#create-button {
+  background: #a2e579;
+  width: fit-content;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+
+  &:hover {
+    color: #a2e579;
+    background: #000000;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .inner-container {
+    width: 90%;
+  }
+
+  .add-new-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .inner-container {
+    width: 100%;
+  }
+}

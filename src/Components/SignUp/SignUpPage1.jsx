@@ -110,6 +110,12 @@ export default function Page1({
   );
 }
 
+Page1.defaultProps = {
+  nameError: null,
+  passwordError: null,
+  emailError: null
+};
+
 Page1.propTypes = {
   toggleSignUp: PropTypes.func.isRequired,
   toggleLogin: PropTypes.func.isRequired,
@@ -120,7 +126,7 @@ Page1.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
-  nameError: PropTypes.string.isRequired,
-  passwordError: PropTypes.string.isRequired,
-  emailError: PropTypes.string.isRequired
+  nameError: PropTypes.string,
+  passwordError: PropTypes.string,
+  emailError: PropTypes.string
 };

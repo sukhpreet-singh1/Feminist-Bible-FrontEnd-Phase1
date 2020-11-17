@@ -1,14 +1,14 @@
 import React from 'react';
 
-import ReportList from '../../src/Components/Admin/ReportList/ReportList';
+import Tags from '../../src/Components/Admin/Tags/Tags';
 import ProtectedAdminRoute from '../../src/Hoc/ProtectedAdminRoute';
 
-const Reports = () => {
+const TagsPage = () => {
   return (
     <ProtectedAdminRoute>
-      <ReportList />
+      <Tags />
     </ProtectedAdminRoute>
   );
 };
 
-export default Reports;
+export default TagsPage;

@@ -22,6 +22,7 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
   const [name, setName] = useState(''); // Name of User
   const [email, setEmail] = useState(''); // Email of User
   const [password, setPassword] = useState(''); // Password
+  const [selectedTags, setSelectedTags] = useState([]);
 
   {
     /** ================================ Validation Error States ================================ */
@@ -46,9 +47,8 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
     }
 
     try {
-      await auth.signUp(name, password, email);
+      await auth.signUp(name, email, password);
       const res = await getProfile();
-      console.log(res);
       const user = res && res.data && res.data.data;
       if (user) {
         setUser({
@@ -112,7 +112,12 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
           />
         )}
         {tab === 1 && (
-          <Page2 setTab={setTab} submitSignUpForm={submitSignUpForm} />
+          <Page2
+            setTab={setTab}
+            submitSignUpForm={submitSignUpForm}
+            setSelectedTags={setSelectedTags}
+            selectedTags={selectedTags}
+          />
         )}
       </div>
       {/** ========================================== Container Ends ========================================== */}

@@ -1,14 +1,9 @@
 import React from 'react';
 
 import RealWomen from '../src/Components/Feed/RealWomen';
-import Layout from '../src/Hoc/Layout';
 
 const Feed2 = () => {
-  return (
-    <Layout>
-      <RealWomen />
-    </Layout>
-  );
+  return <RealWomen />;
 };
 
 export default Feed2;

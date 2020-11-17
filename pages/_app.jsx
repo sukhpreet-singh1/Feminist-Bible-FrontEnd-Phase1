@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
-import { getProfile } from '../src/services/user';
+
 import '../src/scss/style.scss';
 import UserContext from '../src/Components/Context/UserContext';
+import Layout from '../src/Hoc/Layout';
 import { logout } from '../src/services/auth';
-
+import { getProfile } from '../src/services/user';
 /* eslint-disable-next-line */
 function MyApp({ Component, pageProps }) {
   const [User, setUser] = useState(null);
@@ -38,23 +39,22 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   if (isLoading) return <div>Loading ....</div>;
-  else
-    return (
-      <>
-        <Head>
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <title>Feminist Bible</title>
-        </Head>
-        <UserContext.Provider value={{ User, setUser }}>
+
+  return (
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Feminist Bible</title>
+      </Head>
+      <UserContext.Provider value={{ User, setUser }}>
+        <Layout>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Component {...pageProps} />
-        </UserContext.Provider>
-      </>
-    );
+        </Layout>
+      </UserContext.Provider>
+    </>
+  );
 }
 
 export default MyApp;

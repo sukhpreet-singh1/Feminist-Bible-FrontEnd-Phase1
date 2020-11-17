@@ -58,10 +58,6 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  span {
-    font-weight: 600;
-  }
-
   .input {
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
@@ -71,6 +67,36 @@
     font-weight: 300;
     border: 0.4px solid #2e2e2e31;
   }
+}
+
+.tag-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: transparent;
+  border: 0.4px solid #e7edf3;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  padding: 0.2rem;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  border: 0.4px solid #e7edf3;
+  cursor: pointer;
+  min-width: 3rem;
+  text-align: center;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  width: max-content;
+}
+
+.tag-selected {
+  background: #e7edf3;
 }
 
 .button {
@@ -125,13 +151,15 @@
 }
 
 .skip-button {
-  background-color: $background-yellow;
-  font-weight: 300;
+  background-color: transparent;
+  font-weight: 200;
+  text-decoration: underline;
   padding: 0.5rem 1.5rem;
-
-  width: max-content;
   margin-bottom: 1rem;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    color: #0000ff;
+  }
 }
 
 .signup-button {
