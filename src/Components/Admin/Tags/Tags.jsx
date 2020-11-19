@@ -82,14 +82,6 @@ const Tags = () => {
     getTags();
   }, []);
 
-  useEffect(() => {
-    if (tagModalVisible === true) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }, [tagModalVisible]);
-
   /* ========================================= Check Color (Light or Dark) ========================================= */
 
   const checkColor = (clr) => {

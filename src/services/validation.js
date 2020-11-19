@@ -11,3 +11,14 @@ export const validateEmail = (email) => {
   }
   return 'Please enter a valid email address.';
 };
+
+
+{
+  /* ================================= Input Field Validation ================================= */
+}
+
+export const validateLength = (data,minLength=1) => {
+
+  return data.length >= minLength;
+
+}
