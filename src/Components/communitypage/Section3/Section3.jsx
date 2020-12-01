@@ -33,7 +33,7 @@ const Section3 = () => {
           </ul>
           <div className={styles['sub-text2']}>If you do not understand and accept the terms and conditions, the community guidelines and code conduct, and established an account. In that case, the account is immediately deleted, and your access will be blocked. </div>
           <div className={styles['sub-text3']}>The Feminist Bible does not allow search-indexing or public access to user profiles, writing projects, or forums. You may not solicit individuals without express consent by the members of this community.</div>
-          </div>   
+          </div> 
           <span className={styles.heading3}>Personal Information</span>
           <div className={styles['main-content']}>
             <ul className={styles.list1}>
