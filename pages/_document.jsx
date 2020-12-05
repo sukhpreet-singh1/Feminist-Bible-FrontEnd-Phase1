@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="id">
+      <Html lang="en">
         <Head>
           <link rel="icon" type="image/x-icon" href="/images/logo.png" />
         </Head>
