@@ -57,7 +57,7 @@ export default function SideDrawer({
               NOTIFICATIONS
             </a>
             <a href="/profile" onClick={toggleSideDrawer}>
-              <img alt="" src="/test/user1.png" />
+              <img alt="" src="/test/user1.png" id={styles['profile-img']} />
               PROFILE
             </a>
             <hr />
@@ -65,18 +65,22 @@ export default function SideDrawer({
         )}
 
         <a href="/" onClick={toggleSideDrawer}>
+          <img alt="" src="/icons/home.png" />
           HOME
         </a>
 
         <a href="/feed" onClick={toggleSideDrawer}>
+          <img alt="" src="/icons/book-open.png" />
           FEED
         </a>
 
         <a href="/" onClick={toggleSideDrawer}>
+          <img alt="" src="/icons/write.png" />
           START WRITING
         </a>
 
         <a href="/" onClick={toggleSideDrawer}>
+          <img alt="" src="/icons/drafts.png" />
           DRAFTS
         </a>
 
@@ -84,14 +88,17 @@ export default function SideDrawer({
           href="/"
           onClick={toggleSideDrawer}
           style={{ color: '#4a2343', fontWeight: '600' }}>
+          <img alt="" src="/icons/heart.png" />
           DONATE
         </a>
 
         <a href="/" onClick={toggleSideDrawer}>
+          <img alt="" src="/icons/alert-circle.png" />
           FAQ
         </a>
 
         <a href="#about" onClick={toggleSideDrawer}>
+          <img alt="" src="/icons/alert-circle.png" />
           ABOUT US
         </a>
 

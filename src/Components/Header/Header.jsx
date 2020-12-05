@@ -71,7 +71,7 @@ export default function Header() {
               type="button"
               className={styles.button}
               id={styles.notification}>
-              <img src="/icons/notification.png" alt="Notifications" />
+              <img src="/icons/notification-header.png" alt="Notifications" />
             </button>
             <a href="/profile" title="Profile" style={{ padding: '0' }}>
               <img src="/test/user1.png" id={styles['user-image']} alt="User" />{' '}
