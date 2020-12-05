@@ -3,7 +3,7 @@ import React from 'react';
 import Profile from '../src/Components/Profile/Profile';
 import ProtectedUserRoute from '../src/Hoc/ProtectedUserRoute';
 
-const userList = () => {
+const profilePage = () => {
   return (
     <ProtectedUserRoute>
       <Profile />
@@ -11,4 +11,4 @@ const userList = () => {
   );
 };
 
-export default userList;
+export default profilePage;
