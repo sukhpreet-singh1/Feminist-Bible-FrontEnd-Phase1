@@ -6,17 +6,28 @@
   padding:2.5rem;
   background-color:$background-yellow;
   box-sizing:border-box;
-  padding-bottom:100px;
+  //padding-bottom:100px;
+  overflow-x:hidden;
+  background-color:$background-yellow;
   background: linear-gradient(35deg, $background-yellow 45%, $pink-shade 45%);
-  
 }
-
-.heading1, .heading2, .heading3, .heading4 {
+ .heading2, .heading3, .heading4 {
   display: block;
   font-weight: 400;
   font-size: 50px;
   padding-bottom: 1rem;
-  margin-top:50px;
+  margin-top:150px;
+  margin-bottom:50px;
+  font-family: $sub-heading-font;
+  color: #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+}
+.heading1{
+    display: block;
+  font-weight: 400;
+  font-size: 50px;
+  padding-bottom: 1rem;
+  //margin-top:150px;
   margin-bottom:50px;
   font-family: $sub-heading-font;
   color: #2e2e2e;
@@ -109,20 +120,19 @@
   font-weight: 400;
   font-size: 50px;
   padding-bottom: 1rem;
-  margin-top:50px;
+  margin-top:150px;
   margin-bottom:50px;
   font-family: $sub-heading-font;
-  color:#F8F9FB;
-  border-bottom: 1px solid#F8F9FB;
+  color:#2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
 }
 .main-content1{
-    background-image: linear-gradient(325deg, #FFFFFF 0%, #4A2343 100%) ;
-    font-family: $text-font ;                        ;
+        font-family: $text-font ;                        ;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
         line-height: 26px;
-        color: #F8F9FB;
+        color: #000000;
         display:inline-block;
         margin-left:5rem;
         
