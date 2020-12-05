@@ -4,7 +4,6 @@ import React, { useContext, useState } from 'react';
 
 import * as auth from '../../services/auth';
 import { getProfile } from '../../services/user';
-import { validateEmail } from '../../services/validation';
 import UserContext from '../Context/UserContext';
 import styles from './login.module.scss';
 
@@ -28,11 +27,6 @@ export default function Login({ toggleLogin, toggleSignUp }) {
   const [loginError, setLoginError] = useState(null);
 
   const submitLoginForm = async () => {
-    const validate = validateEmail(email);
-    if (validate !== null) {
-      setEmailError(validate);
-      return;
-    }
     try {
       await auth.login(email, password);
       const res = await getProfile();
