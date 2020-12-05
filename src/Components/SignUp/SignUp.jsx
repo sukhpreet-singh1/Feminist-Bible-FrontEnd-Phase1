@@ -20,6 +20,7 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
     /** ================================ Form Input States ================================ */
   }
   const [name, setName] = useState(''); // Name of User
+  const [username, setUsername] = useState(''); // UserName (Alias)
   const [email, setEmail] = useState(''); // Email of User
   const [password, setPassword] = useState(''); // Password
   const [selectedTags, setSelectedTags] = useState([]);
@@ -29,6 +30,7 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
   }
 
   const [nameError, setNameError] = useState(null);
+  const [usernameError, setUsernameError] = useState(null);
   const [emailError, setEmailError] = useState(null);
   const [passwordError, setPasswordError] = useState(null);
 
@@ -47,7 +49,7 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
     }
 
     try {
-      await auth.signUp(name, email, password);
+      await auth.signUp(name, email, password, username);
       const res = await getProfile();
       const user = res && res.data && res.data.data;
       if (user) {
@@ -65,6 +67,7 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
       if (e.email) setEmailError(e.email);
       if (e.password) setPasswordError(e.password);
       if (e.name) setNameError(e.name);
+      if (e.username) setUsernameError(e.username);
       auth.logout();
       setTab(0);
     }
@@ -94,6 +97,7 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
             name={name}
             password={password}
             email={email}
+            username={username}
             setName={(val) => {
               setName(val);
               setNameError(null);
@@ -106,9 +110,14 @@ export default function SignUp({ toggleSignUp, toggleLogin }) {
               setEmail(val);
               setEmailError(null);
             }}
+            setUsername={(val) => {
+              setUsername(val);
+              setUsernameError(null);
+            }}
             nameError={nameError}
             emailError={emailError}
             passwordError={passwordError}
+            usernameError={usernameError}
           />
         )}
         {tab === 1 && (

@@ -11,12 +11,15 @@ export default function Page1({
   name,
   password,
   email,
+  username,
+  setUsername,
   setName,
   setEmail,
   setPassword,
   nameError,
   emailError,
-  passwordError
+  passwordError,
+  usernameError
 }) {
   return (
     <div>
@@ -48,6 +51,20 @@ export default function Page1({
               onChange={(e) => setName(e.currentTarget.value)}
             />
             {nameError && <span className="error-message">{nameError}</span>}
+
+            <input
+              type="text"
+              className={`${styles.input} ${
+                usernameError !== null ? 'error' : ''
+              } `}
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.currentTarget.value)}
+            />
+            {usernameError && (
+              <span className="error-message">{usernameError}</span>
+            )}
+
             <input
               type="email"
               className={`${styles.input} ${
@@ -113,7 +130,8 @@ export default function Page1({
 Page1.defaultProps = {
   nameError: null,
   passwordError: null,
-  emailError: null
+  emailError: null,
+  usernameError: null
 };
 
 Page1.propTypes = {
@@ -121,12 +139,15 @@ Page1.propTypes = {
   toggleLogin: PropTypes.func.isRequired,
   setTab: PropTypes.func.isRequired,
   setName: PropTypes.func.isRequired,
+  setUsername: PropTypes.func.isRequired,
   setEmail: PropTypes.func.isRequired,
   setPassword: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   nameError: PropTypes.string,
   passwordError: PropTypes.string,
-  emailError: PropTypes.string
+  emailError: PropTypes.string,
+  usernameError: PropTypes.string
 };
