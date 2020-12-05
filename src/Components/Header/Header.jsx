@@ -31,6 +31,14 @@ export default function Header() {
   return (
     <div className={styles.container}>
       <div className={styles['left-col']}>
+        <button
+          type="button"
+          id={styles.menu}
+          className={styles.button}
+          onClick={toggleSideDrawer}>
+          <img src="/icons/hamburger.svg" alt="Menu" />
+        </button>
+
         <img src="/images/full-logo.png" alt="Feminist Bible" />
       </div>
 
@@ -70,13 +78,6 @@ export default function Header() {
             </a>
           </>
         )}
-        <button
-          type="button"
-          id={styles.menu}
-          className={styles.button}
-          onClick={toggleSideDrawer}>
-          <img src="/icons/hamburger.svg" alt="Menu" />
-        </button>
       </div>
 
       {/** ============================= Side Drawer ============================= */}

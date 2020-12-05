@@ -11,7 +11,7 @@
 
 .container {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   padding: 1rem;
   background-color: #fff0f0;
@@ -26,7 +26,7 @@
     font-weight: 500;
     padding: 0.5rem;
     img {
-      height: 2rem;
+      height: 2.15rem;
       width: 2rem;
       margin-right: 0.5rem;
       border-radius: 2rem;
@@ -39,9 +39,9 @@
 
 .close-button {
   font-weight: 500;
-  margin: 0.5rem 1rem 2rem;
+  margin-bottom: 2rem;
   width: fit-content;
-  float: right;
+  float: left;
 }
 
 .auth-buttons-div {
@@ -84,5 +84,6 @@
 
   .close-button {
     margin: 0;
+    float: right;
   }
 }

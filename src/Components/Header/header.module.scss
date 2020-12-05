@@ -13,6 +13,9 @@
 }
 
 .left-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     max-height: 3rem;
   }
@@ -44,6 +47,7 @@
   }
 
   #user-image {
+    display: flex;
     max-width: 3rem;
     max-height: 3rem;
     border-radius: 5rem;
@@ -60,7 +64,7 @@
   #signup,
   #notification,
   #user-image {
-    display: none;
+    display: none !important;
   }
 
   .left-col {
