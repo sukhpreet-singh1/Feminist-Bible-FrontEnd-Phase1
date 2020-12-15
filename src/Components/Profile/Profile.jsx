@@ -39,7 +39,7 @@ export default function Profile() {
               }
               {/** Edit Profile Option */}
               <span style={{ display: 'flex', alignItems: 'center' }}>
-                <a href="#">
+                <a href="editprofile">
                   <img
                     src="/icons/edit.png"
                     id={styles.edit}

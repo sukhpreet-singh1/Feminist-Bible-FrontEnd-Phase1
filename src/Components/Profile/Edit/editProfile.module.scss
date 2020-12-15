@@ -1,0 +1,107 @@
+@import '../../../scss/variables';
+.container {
+  padding: 1rem;
+  background-color: $background-yellow;
+}
+
+.inner-container {
+  margin: auto;
+  width: 75%;
+  margin-top: 2rem;
+}
+
+.heading {
+  font-family: $sub-heading-font;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: block;
+  margin: auto;
+}
+
+.image-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#profile-image {
+  border-radius: 50%;
+}
+
+.organisations-grid {
+  margin: auto;
+  justify-content: center;
+  grid-gap: 1rem;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  margin-top: 0.5rem;
+  align-items: baseline;
+  justify-content: center;
+  text-align: right;
+  label {
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+}
+
+.input {
+  padding: 0.25rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 300;
+  border: 2px solid #4a2343;
+}
+
+.save-button {
+  display: block;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  border: 2px solid #4a2343;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background-color: rgb(73, 121, 25);
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    text-align: center;
+  }
+
+  .inner-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .input-row {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #profile-image {
+    max-width: 10rem;
+  }
+
+  .input-row {
+    width: 80%;
+  }
+}
