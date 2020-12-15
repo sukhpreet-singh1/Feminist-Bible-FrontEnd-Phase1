@@ -26,7 +26,7 @@
     font-weight: 500;
     padding: 0.5rem;
     img {
-      margin-right: 1.5rem;
+      margin-right: 2rem;
     }
 
     #profile-img {
@@ -36,7 +36,8 @@
     }
 
     &:hover {
-      text-decoration: underline;
+      // text-decoration: underline;
+      background-color: rgb(255, 255, 240);
     }
   }
 }

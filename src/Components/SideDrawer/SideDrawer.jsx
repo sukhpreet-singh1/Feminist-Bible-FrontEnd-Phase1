@@ -87,7 +87,7 @@ export default function SideDrawer({
         <a
           href="/"
           onClick={toggleSideDrawer}
-          style={{ color: '#4a2343', fontWeight: '600' }}>
+          style={{ color: '#4a2343', fontWeight: '700' }}>
           <img alt="" src="/icons/heart.png" />
           DONATE
         </a>
