@@ -53,25 +53,33 @@ export default function Profile() {
               </span>
             </div>
             <div id={styles.username}>
-              <span>@username</span>
-              <span>He/She</span>
+              <span>{userData.username && `@${userData.username}`}</span>
+              <span>
+                {userData.pronoun ? userData.pronoun : 'pronoun(He/She)'}
+              </span>
             </div>
             <div id={styles.description}>
-              {' '}
+              {userData.bio
+                ? userData.bio
+                : `
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
               sed fermentum, morbi diam viverra mollis.Lorem ipsum dolor sit
               amet, consectetur adipiscing elit. Auctor sed fermentum, morbi
               diam viverra mollis.Lorem ipsum dolor sit amet, consectetur
               adipiscing elit. Auctor sed fermentum, morbi diam viverra
               mollis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Auctor sed fermentum, morbi diam viverra mollis.
+              Auctor sed fermentum, morbi diam viverra mollis.`}
               <br />
               <a
-                href="https://www.google.com"
+                href={
+                  userData.link
+                    ? userData.link
+                    : 'https://feminist-bible-phase1.netlify.app/'
+                }
                 target="_blank"
                 rel="noreferrer noopener"
                 className={styles.link}>
-                https://www.google.com
+                Socials
               </a>
             </div>
           </div>
