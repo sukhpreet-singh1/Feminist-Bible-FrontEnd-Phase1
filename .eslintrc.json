@@ -30,6 +30,7 @@
     ],
     "no-lone-blocks": "off",
     "no-underscore-dangle": "off",
-    "no-async-promise-executor": "off"
+    "no-async-promise-executor": "off",
+    "allowShortCircuit":"true"
   }
 }
