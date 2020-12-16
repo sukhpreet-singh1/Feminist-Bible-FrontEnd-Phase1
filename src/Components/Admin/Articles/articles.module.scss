@@ -1,0 +1,60 @@
+@import '../../../scss/variables';
+.container {
+  width: 100%;
+  margin: auto;
+  background-color: $background-yellow;
+  padding: 2rem;
+}
+
+.inner-container {
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
+.heading {
+  font-family: $sub-heading-font;
+}
+
+.filters-row {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
+}
+
+.articles-list-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// ========================================= Media Queries =================================
+
+@media only screen and (max-width: 1200px) {
+  .inner-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .inner-container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .inner-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    padding: 1rem;
+  }
+}
