@@ -68,12 +68,10 @@ export default function EditProfile() {
               id={styles['profile-image']}
               alt="Profile"
             />
-            <input
-              type="image"
-              src="/icons/camera.png"
-              id={styles['image-input']}
-              alt="Add"
-            />
+            <label htmlFor={styles['image-input']}>
+              <img src="/icons/camera.svg" alt="Upload" />
+            </label>
+            <input type="file" id={styles['image-input']} />
           </span>
           {/** ---------- Name ---------- */}
           <span className={styles['input-row']}>
@@ -151,9 +149,9 @@ export default function EditProfile() {
           {/** ---------- Bio ---------- */}
           <span className={styles['input-row']}>
             <label>Bio</label>
-
-            <input
+            <textarea
               type="text"
+              rows="5"
               className={`${styles.input} ${bioError !== null ? 'error' : ''} `}
               placeholder="Bio"
               value={bio}

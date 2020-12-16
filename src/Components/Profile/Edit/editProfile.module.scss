@@ -19,6 +19,10 @@
 .form {
   display: block;
   margin: auto;
+
+  textarea {
+    resize: none;
+  }
 }
 
 .image-row {
@@ -26,6 +30,19 @@
   align-items: baseline;
   justify-content: center;
   margin-bottom: 2rem;
+  label {
+    img {
+      height: 2rem;
+      margin-left: -1rem;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+#image-input {
+  display: none;
 }
 
 #profile-image {
