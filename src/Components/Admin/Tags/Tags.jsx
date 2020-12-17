@@ -55,6 +55,12 @@ const Tags = () => {
       if (res && res.data && res.data.data) {
         setTagList([...tagList, res.data.data].flat());
         resetForm();
+        alert(
+          `New Tag Created with following data.
+        \nLabel: ${res.data.data.name} 
+        \nDescription:${res.data.data.description}
+        \nColor:${res.data.data.color}`
+        );
       }
     } catch (error) {
       const err = error && error.data;
@@ -69,10 +75,10 @@ const Tags = () => {
   const deleteTag = async (id) => {
     try {
       const res = await services.deleteTag(id);
-      console.log(res);
+      res && alert('Tag Deleted Successfully!');
       getTags();
     } catch (error) {
-      console.log(error);
+      alert(error.message);
     }
   };
 
@@ -80,7 +86,7 @@ const Tags = () => {
 
   useEffect(() => {
     getTags();
-  }, []);
+  }, [tagModalVisible]);
 
   /* ========================================= Check Color (Light or Dark) ========================================= */
 
@@ -109,6 +115,7 @@ const Tags = () => {
               return (
                 <button
                   type="button"
+                  title={tag.description}
                   key={tag._id}
                   className={styles.tag}
                   style={{

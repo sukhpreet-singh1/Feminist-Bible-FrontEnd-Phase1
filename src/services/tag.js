@@ -49,14 +49,14 @@ export const deleteTag = async (tagId)=>{
 }
 
 /* 
-    ========================================== Edit Tag ======================================== 
+    ========================================== Edit/Update Tag ======================================== 
 */
 
 
 export const editTag = async (tagId,label,description,color)=>{
     return new Promise(async (resolve, reject) => {
     try {
-      const res = await http.patch(`${baseURL}/${tagId}`);
+      const res = await http.patch(`${baseURL}/${tagId}`,{name:label,description,color});
       resolve(res);
     } catch (error) {
         reject(error);

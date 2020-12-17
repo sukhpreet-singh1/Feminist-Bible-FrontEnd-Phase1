@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import styles from './tagModal.module.scss';
+import { editTag } from '../../../../services/tag';
 
 const TagModal = ({ tag, deleteTag, close }) => {
   /** ========================== Edit Tag States ========================== */
@@ -16,6 +17,21 @@ const TagModal = ({ tag, deleteTag, close }) => {
   const [labelError, setLabelError] = useState(null);
   const [descriptionError, setDescriptionError] = useState(null);
   const [codeError, setCodeError] = useState(null);
+
+  /* ========================================= Update Tag Function ========================================= */
+
+  const UpdateTag = async () => {
+    try {
+      await editTag(tag._id, label, description, code);
+      alert('Tag Updated Successfully!');
+      close();
+    } catch (error) {
+      const errors = error.data;
+      errors && errors.name && setLabelError(errors.name);
+      errors && errors.description && setDescriptionError(errors.description);
+      errors && errors.color && setCodeError(errors.color);
+    }
+  };
 
   /* ========================================= Check Color (Light or Dark) ========================================= */
 
@@ -105,9 +121,9 @@ const TagModal = ({ tag, deleteTag, close }) => {
 
             <button
               type="button"
-              // onClick={addNewTag}
+              onClick={UpdateTag}
               id={styles['create-button']}>
-              Edit Tag
+              Update Tag
             </button>
           </form>
 
@@ -115,9 +131,9 @@ const TagModal = ({ tag, deleteTag, close }) => {
           <button
             type="button"
             className={styles['delete-button']}
-            onClick={() => {
+            onClick={async () => {
               if (confirm('Are you sure to delete this Tag ?')) {
-                deleteTag(tag._id);
+                await deleteTag(tag._id);
                 close();
               }
             }}>
