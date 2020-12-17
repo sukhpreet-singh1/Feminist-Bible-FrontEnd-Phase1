@@ -54,12 +54,10 @@ function CommunityArticle() {
           Lorem ipsum sig mundus creatus est. Lorem ipsum sig mundus creatus
           est.{' '}
         </p>
-        <p>
-          Tiffany Grant Aug 2, 2020
-          <span style={{ background: '#ED8D8D' }}>Self help</span>
-          <span style={{ background: '#B1ED8D' }}>Productivity</span>
-          <span style={{ background: '#E9F466' }}>+3</span>
-        </p>
+        <p>Tiffany Grant Aug 2, 2020</p>
+        <span style={{ background: '#ED8D8D' }}>Self help</span>
+        <span style={{ background: '#B1ED8D' }}>Productivity</span>
+        <span style={{ background: '#E9F466' }}>+3</span>
       </div>
     </div>
   );
