@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 import { getProfile } from '../../services/user';
 import styles from './profile.module.scss';
+import BottomComponent from './BottomComponents/BottomComponent';
 
 export default function Profile() {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [option, setOption] = useState(1);
+
+  {
+    /** ====================== Get Data for displaying Profile ====================== */
+  }
 
   const getData = async () => {
     try {
@@ -23,11 +29,20 @@ export default function Profile() {
     getData();
   }, []);
 
+  {
+    /** ====================== Set the content option to display in bottom row ====================== */
+  }
+
+  const setBottomRowContent = (id) => {
+    setOption(id);
+  };
+
   if (loading) return <div> Loading ....</div>;
 
   return (
     <div className={styles.container}>
       <div className={styles['inner-container']}>
+        {/** ------------------------------- Upper Row ------------------------------- */}
         <div className={styles['upper-row']}>
           <img src="/test/user1.png" alt="Profile" />
           <div className={styles['right-col']}>
@@ -83,6 +98,49 @@ export default function Profile() {
               </a>
             </div>
           </div>
+        </div>
+        {/** ------------------------------- Upper Row Ends ------------------------------- */}
+
+        {/** ------------------------------- Bottom Row ------------------------------- */}
+        <div className={styles['bottom-row']}>
+          <div className={styles['menu-items']}>
+            <button
+              type="button"
+              onClick={() => {
+                setBottomRowContent(1);
+              }}
+              className={option === 1 ? styles['selected'] : null}>
+              Published Work
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setBottomRowContent(2);
+              }}
+              className={option === 2 ? styles['selected'] : null}>
+              Liked Articles
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setBottomRowContent(3);
+              }}
+              className={option === 3 ? styles['selected'] : null}>
+              Following
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setBottomRowContent(4);
+              }}
+              className={option === 4 ? styles['selected'] : null}>
+              Followers
+            </button>
+          </div>
+          <BottomComponent option={option} />
         </div>
       </div>
     </div>

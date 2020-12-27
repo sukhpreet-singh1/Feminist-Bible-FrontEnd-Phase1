@@ -75,6 +75,34 @@
   padding: 0;
 }
 
+/* ===================================== Bottom   Row  ===================================== */
+
+.bottom-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  button {
+    margin: 0 1rem;
+    opacity: 0.75;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.75);
+  }
+}
+
+.selected {
+  opacity: 1 !important;
+  border-bottom: 2px solid #000 !important;
+  font-weight: 500;
+}
+
 /* ===================================== Media Queries ===================================== */
 
 @media only screen and (max-width: 1100px) {
@@ -101,5 +129,25 @@
   }
   #name {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .menu-items {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    margin: auto;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    button {
+      border: 1.5px solid rgba(0, 0, 0, 0.75);
+      width: 100%;
+      margin: 0;
+    }
+    .selected {
+      border: 2px solid #000 !important;
+    }
   }
 }

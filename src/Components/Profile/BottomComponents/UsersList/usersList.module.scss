@@ -1,0 +1,52 @@
+@import '../../../../scss/variables';
+
+.user-list-container {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  margin: auto;
+  grid-gap: 1rem;
+}
+
+// =======================================  UserBox ==============================================
+.userbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  img {
+    max-width: 80%;
+    border-radius: 50%;
+    margin-bottom: 0.25rem;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  h4 {
+    opacity: 0.75;
+    font-weight: 400;
+  }
+}
+// =======================================  UserBox Ends ==============================================
+
+// =======================================  Media Queries ==============================================
+
+@media only screen and (max-width: 900px) {
+  .user-list-container {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .user-list-container {
+    grid-template-columns: 49% 49%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .user-list-container {
+    grid-template-columns: 100%;
+  }
+}
