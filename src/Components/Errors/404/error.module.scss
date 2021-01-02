@@ -1,0 +1,98 @@
+@import '../../../scss/variables';
+
+.container {
+  padding: 2rem;
+  background-color: $background-yellow;
+}
+
+.inner-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#error-image {
+  width: 60%;
+  display: block;
+}
+
+.right {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.button {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: $violet-shade;
+  color: #fff;
+  position: relative;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2.5rem;
+}
+
+/* ==================================== Media Queries ===============================================================*/
+
+@media only screen and (max-width: 1000px) {
+  #error-image {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .inner-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #error-image {
+    width: 50%;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+  .text {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .button {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+}
